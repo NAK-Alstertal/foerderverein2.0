@@ -20,7 +20,7 @@ export default function Membership() {
       <HeroBanner title={t('membership.title')} subtitle={t('membership.subtitle')} />
 
       {/* Content */}
-      <section className="pt-8 pb-16 md:pt-12 md:pb-24">
+      <section className="py-16 md:py-24">
         <div className="container">
           <div className="grid gap-8 lg:grid-cols-2">
             {/* Intro Card */}

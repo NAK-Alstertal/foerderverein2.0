@@ -14,7 +14,7 @@ export default function Imprint() {
     <Layout>
       <HeroBanner title={title} subtitle={subtitle} />
       
-      <section className="pt-8 pb-16 md:pt-12 md:pb-24">
+      <section className="py-16 md:py-24">
         <div className="container">
           <div className="mx-auto max-w-4xl">
 

@@ -16,7 +16,7 @@ export default function Donate() {
       />
 
       {/* Content */}
-      <section className="pt-8 pb-16 md:pt-12 md:pb-24">
+      <section className="py-16 md:py-24">
         <div className="container">
           <div className="grid gap-8 lg:grid-cols-2">
             {/* Bank Transfer */}
@@ -32,7 +32,6 @@ export default function Donate() {
                   <p className="font-semibold text-foreground">{t('donate.bank.name')}</p>
                   <p className="text-muted-foreground font-mono text-sm">{t('donate.bank.iban')}</p>
                   <p className="text-muted-foreground font-mono text-sm">{t('donate.bank.bic')}</p>
-                  <p className="text-muted-foreground text-sm">{t('donate.bank.bank')}</p>
                   <p className="text-muted-foreground text-sm">{t('donate.bank.reference')}</p>
                 </div>
               </CardContent>
@@ -52,7 +51,7 @@ export default function Donate() {
                 </CardDescription>
                 <Button size="lg" className="w-full bg-[#0070ba] hover:bg-[#005ea6] text-white" asChild>
                   <a 
-                    href="https://paypal.me/nakalstertal" 
+                    href="https://www.paypal.com/donate" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
