@@ -17,20 +17,32 @@ export default function Membership() {
 
   return (
     <Layout>
-      <HeroBanner 
-        title={t('membership.title')} 
-        subtitle={t('membership.intro')} 
-      />
+      <HeroBanner title={t('membership.title')} />
 
       {/* Content */}
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="grid gap-8 lg:grid-cols-2">
-            {/* Benefits */}
-            <Card className="animate-fade-up">
+            {/* Intro Card */}
+            <Card className="animate-fade-up lg:col-span-2">
               <CardHeader>
                 <div className="mb-2 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
                   <Users className="h-6 w-6" />
+                </div>
+                <CardTitle>Werde Teil unseres Vereins</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-base leading-relaxed">
+                  {t('membership.intro')}
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            {/* Benefits */}
+            <Card className="animate-fade-up animation-delay-100">
+              <CardHeader>
+                <div className="mb-2 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <Check className="h-6 w-6" />
                 </div>
                 <CardTitle>{t('membership.benefits.title')}</CardTitle>
               </CardHeader>
