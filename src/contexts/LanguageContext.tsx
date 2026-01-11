@@ -30,7 +30,7 @@ const translations: Record<Language, Record<string, string>> = {
     // About
     'about.title': 'Über unseren Verein',
     'about.purpose.title': 'Unser Zweck',
-    'about.purpose.text': 'Der Förderverein NAK Alstertal e.V. unterstützt die Neuapostolische Kirche Hamburg-Alstertal bei der Erfüllung ihrer kirchlichen und sozialen Aufgaben.',
+    'about.purpose.text': 'Zweck des Vereins ist die ideelle und finanzielle Förderung kirchlicher und gemeinnütziger Zwecke der Neuapostolischen Kirchengemeinde Hamburg-Alstertal. Hierzu gehören insbesondere die Förderung von Aktivitäten, die der Glaubenspflege, der Förderung christlicher Werte und dem Aufbau eines gemeinschaftlichen Lebens dienen.',
     'about.goals.title': 'Unsere Ziele',
     'about.goals.text': 'Wir fördern gemeinnützige, mildtätige und kirchliche Zwecke durch finanzielle Unterstützung von Projekten, Veranstaltungen und sozialen Initiativen.',
     'about.statute.title': 'Satzung',
@@ -108,7 +108,7 @@ const translations: Record<Language, Record<string, string>> = {
     // About
     'about.title': 'About Our Association',
     'about.purpose.title': 'Our Purpose',
-    'about.purpose.text': 'The Förderverein NAK Alstertal e.V. supports the New Apostolic Church Hamburg-Alstertal in fulfilling its ecclesiastical and social tasks.',
+    'about.purpose.text': 'The purpose of the association is the ideal and financial support of ecclesiastical and charitable purposes of the New Apostolic Church congregation Hamburg-Alstertal. This includes in particular the promotion of activities that serve the cultivation of faith, the promotion of Christian values and the building of community life.',
     'about.goals.title': 'Our Goals',
     'about.goals.text': 'We promote charitable, benevolent and ecclesiastical purposes through financial support of projects, events and social initiatives.',
     'about.statute.title': 'Statute',
