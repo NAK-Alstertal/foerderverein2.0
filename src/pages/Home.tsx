@@ -71,19 +71,6 @@ export default function Home() {
             <p className="animate-fade-up animation-delay-200 mt-6 text-lg text-white/95 drop-shadow md:text-xl">
               {t('hero.subtitle')}
             </p>
-            <div className="animate-fade-up animation-delay-300 mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-lg">
-                <Link to="/membership">
-                  {t('hero.cta.membership')}
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="bg-white/10 backdrop-blur border-white/30 text-white hover:bg-white/20 font-semibold">
-                <Link to="/donate">
-                  {t('hero.cta.donate')}
-                </Link>
-              </Button>
-            </div>
           </div>
         </div>
         
