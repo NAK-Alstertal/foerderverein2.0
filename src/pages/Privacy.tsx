@@ -1,16 +1,17 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Layout } from '@/components/layout/Layout';
+import { HeroBanner } from '@/components/HeroBanner';
 
 export default function Privacy() {
   const { language } = useLanguage();
 
   return (
     <Layout>
+      <HeroBanner title={language === 'de' ? 'Datenschutzerklärung' : 'Privacy Policy'} />
+
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="mx-auto max-w-3xl prose prose-slate dark:prose-invert">
-            <h1>{language === 'de' ? 'Datenschutzerklärung' : 'Privacy Policy'}</h1>
-
             <h2>{language === 'de' ? '1. Datenschutz auf einen Blick' : '1. Privacy at a Glance'}</h2>
             
             <h3>{language === 'de' ? 'Allgemeine Hinweise' : 'General Information'}</h3>

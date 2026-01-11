@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Layout } from '@/components/layout/Layout';
+import { HeroBanner } from '@/components/HeroBanner';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import { X } from 'lucide-react';
 
@@ -27,19 +28,10 @@ export default function Gallery() {
 
   return (
     <Layout>
-      {/* Hero */}
-      <section className="hero-gradient py-16 md:py-24">
-        <div className="container">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="animate-fade-up text-4xl font-bold tracking-tight text-primary-foreground md:text-5xl">
-              {t('gallery.title')}
-            </h1>
-            <p className="animate-fade-up animation-delay-200 mt-6 text-lg text-primary-foreground/90">
-              {t('gallery.subtitle')}
-            </p>
-          </div>
-        </div>
-      </section>
+      <HeroBanner 
+        title={t('gallery.title')} 
+        subtitle={t('gallery.subtitle')} 
+      />
 
       {/* Gallery Grid */}
       <section className="py-16 md:py-24">
