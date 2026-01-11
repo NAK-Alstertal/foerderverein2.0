@@ -40,7 +40,7 @@ export default function Imprint() {
                     {language === 'de' ? 'Vorstand' : 'Board'}
                   </h2>
                   <p className="text-muted-foreground">
-                    Anja Link, Torsten Müller, Silke Schürenberg
+                    Anja Link, Prof. Dr. Christoph Großmann, Lars Kocherscheid-Dahm
                   </p>
                 </div>
 
