@@ -127,7 +127,7 @@ export default function Home() {
               Als Mitglied oder Spender unterstützen Sie unsere gemeinnützige Arbeit und helfen uns, Gutes zu tun.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg">
+              <Button asChild size="lg" variant="accent">
                 <Link to="/membership">
                   {t('hero.cta.membership')}
                 </Link>
