@@ -1,14 +1,19 @@
 import { ReactNode } from 'react';
+import { cn } from '@/lib/utils';
 import churchIllustration from '@/assets/church-illustration.png';
 
 interface HeroBannerProps {
   title: string;
   subtitle?: ReactNode;
+  children?: ReactNode;
 }
 
-export function HeroBanner({ title, subtitle }: HeroBannerProps) {
+export function HeroBanner({ title, subtitle, children }: HeroBannerProps) {
   return (
-    <section className="relative py-28 md:py-40 overflow-hidden">
+    <section className={cn(
+      "relative overflow-hidden",
+      children ? "pt-20 md:pt-28 pb-32 md:pb-48" : "py-28 md:py-40"
+    )}>
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -39,6 +44,13 @@ export function HeroBanner({ title, subtitle }: HeroBannerProps) {
             </p>
           )}
         </div>
+        
+        {/* Children content area */}
+        {children && (
+          <div className="mt-12 animate-fade-up animation-delay-300">
+            {children}
+          </div>
+        )}
       </div>
       
       {/* Decorative wave */}
