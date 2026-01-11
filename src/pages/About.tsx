@@ -13,7 +13,7 @@ export default function About() {
       <HeroBanner title={t('about.title')} subtitle={t('about.subtitle')} />
 
       {/* Content */}
-      <section className="py-16 md:py-24">
+      <section className="pt-8 pb-16 md:pt-12 md:pb-24">
         <div className="container">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {/* Purpose */}

@@ -18,7 +18,7 @@ export default function Contact() {
       />
 
       {/* Content */}
-      <section className="py-16 md:py-24">
+      <section className="pt-8 pb-16 md:pt-12 md:pb-24">
         <div className="container">
           <div className="mx-auto max-w-2xl">
             <div className="grid gap-8 md:grid-cols-2">
