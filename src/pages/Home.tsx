@@ -1,0 +1,139 @@
+import { Link } from 'react-router-dom';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Layout } from '@/components/layout/Layout';
+import { ArrowRight, Heart, Users, Calendar, ImageIcon } from 'lucide-react';
+
+export default function Home() {
+  const { t } = useLanguage();
+
+  const features = [
+    {
+      icon: Users,
+      title: t('nav.about'),
+      description: 'Erfahren Sie mehr über unseren Verein und unsere Ziele.',
+      descriptionEn: 'Learn more about our association and our goals.',
+      href: '/about',
+    },
+    {
+      icon: Heart,
+      title: t('nav.donate'),
+      description: 'Unterstützen Sie unsere Arbeit mit einer Spende.',
+      descriptionEn: 'Support our work with a donation.',
+      href: '/donate',
+    },
+    {
+      icon: Calendar,
+      title: t('nav.news'),
+      description: 'Aktuelle Neuigkeiten und Veranstaltungen.',
+      descriptionEn: 'Current news and events.',
+      href: '/news',
+    },
+    {
+      icon: ImageIcon,
+      title: t('nav.gallery'),
+      description: 'Eindrücke aus unserem Vereinsleben.',
+      descriptionEn: 'Impressions from our association life.',
+      href: '/gallery',
+    },
+  ];
+
+  return (
+    <Layout>
+      {/* Hero Section */}
+      <section className="relative hero-gradient py-20 md:py-32">
+        <div className="container">
+          <div className="mx-auto max-w-3xl text-center">
+            <h1 className="animate-fade-up text-4xl font-bold tracking-tight text-primary-foreground md:text-5xl lg:text-6xl">
+              {t('hero.title')}
+            </h1>
+            <p className="animate-fade-up animation-delay-200 mt-6 text-lg text-primary-foreground/90 md:text-xl">
+              {t('hero.subtitle')}
+            </p>
+            <div className="animate-fade-up animation-delay-300 mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" variant="secondary" className="font-semibold">
+                <Link to="/membership">
+                  {t('hero.cta.membership')}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold">
+                <Link to="/donate">
+                  {t('hero.cta.donate')}
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+        
+        {/* Decorative wave */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
+            <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="hsl(var(--background))"/>
+          </svg>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16 md:py-24">
+        <div className="container">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {features.map((feature, index) => (
+              <Card 
+                key={feature.href} 
+                className={`group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-up`}
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <CardHeader>
+                  <div className="mb-2 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                    <feature.icon className="h-6 w-6" />
+                  </div>
+                  <CardTitle className="text-lg">{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="mb-4">
+                    {feature.description}
+                  </CardDescription>
+                  <Link 
+                    to={feature.href}
+                    className="inline-flex items-center text-sm font-medium text-primary hover:underline"
+                  >
+                    {t('common.learnMore')}
+                    <ArrowRight className="ml-1 h-4 w-4" />
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-secondary/50">
+        <div className="container">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+              Werden Sie Teil unserer Gemeinschaft
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Als Mitglied oder Spender unterstützen Sie unsere gemeinnützige Arbeit und helfen uns, Gutes zu tun.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg">
+                <Link to="/membership">
+                  {t('hero.cta.membership')}
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <Link to="/contact">
+                  {t('nav.contact')}
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+}
