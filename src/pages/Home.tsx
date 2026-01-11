@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Layout } from '@/components/layout/Layout';
 import { ArrowRight, Heart, Users, Calendar, ImageIcon } from 'lucide-react';
+import churchIllustration from '@/assets/church-illustration.png';
 
 export default function Home() {
   const { t } = useLanguage();
@@ -41,24 +42,43 @@ export default function Home() {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative hero-gradient py-20 md:py-32">
-        <div className="container">
+      {/* Hero Section with Church Illustration */}
+      <section className="relative overflow-hidden">
+        {/* Background with church illustration */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${churchIllustration})` }}
+        />
+        
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/70 to-primary/50" />
+        
+        {/* Rainbow accent bar on left - like in the illustration */}
+        <div className="absolute left-0 top-0 bottom-0 w-2 flex flex-col">
+          <div className="flex-1 bg-[hsl(var(--logo-coral))]" />
+          <div className="flex-1 bg-[hsl(var(--logo-orange))]" />
+          <div className="flex-1 bg-[hsl(var(--logo-yellow))]" />
+          <div className="flex-1 bg-[hsl(var(--logo-green))]" />
+          <div className="flex-1 bg-[hsl(var(--logo-teal))]" />
+          <div className="flex-1 bg-[hsl(var(--logo-purple))]" />
+        </div>
+        
+        <div className="container relative py-24 md:py-36">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="animate-fade-up text-4xl font-bold tracking-tight text-primary-foreground md:text-5xl lg:text-6xl">
+            <h1 className="animate-fade-up text-4xl font-bold tracking-tight text-white drop-shadow-lg md:text-5xl lg:text-6xl">
               {t('hero.title')}
             </h1>
-            <p className="animate-fade-up animation-delay-200 mt-6 text-lg text-primary-foreground/90 md:text-xl">
+            <p className="animate-fade-up animation-delay-200 mt-6 text-lg text-white/95 drop-shadow md:text-xl">
               {t('hero.subtitle')}
             </p>
             <div className="animate-fade-up animation-delay-300 mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" variant="secondary" className="font-semibold">
+              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-lg">
                 <Link to="/membership">
                   {t('hero.cta.membership')}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold">
+              <Button asChild size="lg" variant="outline" className="bg-white/10 backdrop-blur border-white/30 text-white hover:bg-white/20 font-semibold">
                 <Link to="/donate">
                   {t('hero.cta.donate')}
                 </Link>
