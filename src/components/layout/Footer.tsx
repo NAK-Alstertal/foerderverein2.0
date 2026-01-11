@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Heart } from 'lucide-react';
+import logo from '@/assets/logo.png';
 
 export function Footer() {
   const { t } = useLanguage();
@@ -8,14 +9,27 @@ export function Footer() {
 
   return (
     <footer className="border-t border-border bg-secondary/30">
+      {/* Rainbow stripe at top of footer */}
+      <div className="flex h-1.5">
+        <div className="flex-1 bg-[hsl(var(--logo-coral))]" />
+        <div className="flex-1 bg-[hsl(var(--logo-orange))]" />
+        <div className="flex-1 bg-[hsl(var(--logo-yellow))]" />
+        <div className="flex-1 bg-[hsl(var(--logo-green))]" />
+        <div className="flex-1 bg-[hsl(var(--logo-teal))]" />
+        <div className="flex-1 bg-[hsl(var(--logo-blue))]" />
+        <div className="flex-1 bg-[hsl(var(--logo-purple))]" />
+      </div>
+      
       <div className="container py-12">
         <div className="grid gap-8 md:grid-cols-3">
           {/* Logo & Description */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-lg">
-                NAK
-              </div>
+            <div className="flex items-center gap-3">
+              <img 
+                src={logo} 
+                alt="Förderverein NAK Alstertal Logo" 
+                className="h-11 w-11 rounded-lg"
+              />
               <span className="font-semibold text-foreground">
                 Förderverein Alstertal
               </span>
