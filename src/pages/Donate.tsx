@@ -32,6 +32,7 @@ export default function Donate() {
                   <p className="font-semibold text-foreground">{t('donate.bank.name')}</p>
                   <p className="text-muted-foreground font-mono text-sm">{t('donate.bank.iban')}</p>
                   <p className="text-muted-foreground font-mono text-sm">{t('donate.bank.bic')}</p>
+                  <p className="text-muted-foreground text-sm">{t('donate.bank.bank')}</p>
                   <p className="text-muted-foreground text-sm">{t('donate.bank.reference')}</p>
                 </div>
               </CardContent>
