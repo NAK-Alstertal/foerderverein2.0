@@ -4,6 +4,7 @@ import { Menu, X, Globe } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import logo from '@/assets/logo.png';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,10 +29,12 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-lg">
-            NAK
-          </div>
+        <Link to="/" className="flex items-center gap-3">
+          <img 
+            src={logo} 
+            alt="Förderverein NAK Alstertal Logo" 
+            className="h-11 w-11 rounded-lg"
+          />
           <span className="hidden font-semibold text-foreground sm:inline-block">
             Förderverein Alstertal
           </span>
