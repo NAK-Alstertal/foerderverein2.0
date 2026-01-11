@@ -11,72 +11,146 @@ export default function Privacy() {
 
       <section className="py-16 md:py-24">
         <div className="container">
-          <div className="mx-auto max-w-3xl prose prose-slate dark:prose-invert">
-            <h2>{language === 'de' ? '1. Datenschutz auf einen Blick' : '1. Privacy at a Glance'}</h2>
-            
-            <h3>{language === 'de' ? 'Allgemeine Hinweise' : 'General Information'}</h3>
-            <p>
+          <div className="mx-auto max-w-4xl">
+            {/* Intro */}
+            <p className="text-lg text-muted-foreground mb-8">
               {language === 'de'
-                ? 'Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen.'
-                : 'The following notes provide a simple overview of what happens to your personal data when you visit this website.'}
+                ? 'Der Förderverein der Neuapostolischen Kirchengemeinde Hamburg-Alstertal e.V. nimmt den Schutz Ihrer personenbezogenen Daten sehr ernst. Wir behandeln Ihre Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften, insbesondere der Datenschutz-Grundverordnung (DSGVO).'
+                : 'The Förderverein der Neuapostolischen Kirchengemeinde Hamburg-Alstertal e.V. takes the protection of your personal data very seriously. We treat your data confidentially and in accordance with legal data protection regulations, particularly the General Data Protection Regulation (GDPR).'}
             </p>
 
-            <h3>{language === 'de' ? 'Datenerfassung auf dieser Website' : 'Data collection on this website'}</h3>
-            <p>
-              {language === 'de'
-                ? 'Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Die Kontaktdaten können Sie dem Impressum dieser Website entnehmen.'
-                : 'Data processing on this website is carried out by the website operator. You can find the contact details in the imprint of this website.'}
-            </p>
+            {/* 1. Verantwortlicher */}
+            <div className="mb-8">
+              <h2 className="text-xl font-semibold text-foreground mb-4">
+                {language === 'de' ? '1. Verantwortlicher' : '1. Responsible Party'}
+              </h2>
+              <div className="text-muted-foreground space-y-1">
+                <p>Förderverein der Neuapostolischen Kirchengemeinde Hamburg-Alstertal e.V.</p>
+                <p>Dweerblöcken 8</p>
+                <p>22393 Hamburg</p>
+                <p>Deutschland</p>
+                <p className="mt-4">
+                  E-Mail: <a href="mailto:verein@nak-alstertal.de" className="hover:text-primary transition-colors">verein@nak-alstertal.de</a>
+                </p>
+                <p>
+                  Website: <a href="https://verein.nak-alstertal.de" className="hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">https://verein.nak-alstertal.de</a>
+                </p>
+              </div>
+            </div>
 
-            <h2>{language === 'de' ? '2. Hosting' : '2. Hosting'}</h2>
-            <p>
-              {language === 'de'
-                ? 'Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert.'
-                : 'This website is hosted externally. The personal data collected on this website are stored on the servers of the host.'}
-            </p>
+            {/* 2. Datenverarbeitung */}
+            <div className="mb-8">
+              <h2 className="text-xl font-semibold text-foreground mb-4">
+                {language === 'de' ? '2. Datenverarbeitung beim Besuch der Website' : '2. Data Processing When Visiting the Website'}
+              </h2>
+              <div className="text-muted-foreground space-y-4">
+                <p>
+                  {language === 'de'
+                    ? 'Unsere Website dient ausschließlich der Information. Sie können sie ohne Angabe personenbezogener Daten nutzen.'
+                    : 'Our website is for informational purposes only. You can use it without providing personal data.'}
+                </p>
+                <p>
+                  {language === 'de'
+                    ? 'Beim Aufruf der Website werden durch den Webserver automatisch folgende Daten verarbeitet:'
+                    : 'When accessing the website, the web server automatically processes the following data:'}
+                </p>
+                <ul className="list-disc list-inside space-y-1 ml-4">
+                  <li>{language === 'de' ? 'IP-Adresse' : 'IP address'}</li>
+                  <li>{language === 'de' ? 'Datum und Uhrzeit des Zugriffs' : 'Date and time of access'}</li>
+                  <li>{language === 'de' ? 'aufgerufene Seite' : 'accessed page'}</li>
+                  <li>{language === 'de' ? 'Browsertyp und Betriebssystem' : 'Browser type and operating system'}</li>
+                </ul>
+                <p>
+                  {language === 'de'
+                    ? 'Diese Daten werden in sogenannten Server-Logfiles gespeichert. Sie dienen ausschließlich dem technischen Betrieb, der Sicherheit und der Fehleranalyse der Website.'
+                    : 'This data is stored in so-called server log files. They are used exclusively for technical operation, security, and error analysis of the website.'}
+                </p>
+                <p>
+                  {language === 'de'
+                    ? 'Eine Zusammenführung dieser Daten mit anderen Datenquellen oder eine Auswertung zu Marketingzwecken findet nicht statt.'
+                    : 'This data is not merged with other data sources or used for marketing purposes.'}
+                </p>
+                <p>
+                  {language === 'de'
+                    ? 'Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem sicheren und funktionsfähigen Internetauftritt).'
+                    : 'The legal basis is Art. 6 para. 1 lit. f GDPR (legitimate interest in a secure and functional website).'}
+                </p>
+              </div>
+            </div>
 
-            <h2>{language === 'de' ? '3. Allgemeine Hinweise und Pflichtinformationen' : '3. General Notes and Mandatory Information'}</h2>
-            
-            <h3>{language === 'de' ? 'Datenschutz' : 'Data Protection'}</h3>
-            <p>
-              {language === 'de'
-                ? 'Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.'
-                : 'The operators of these pages take the protection of your personal data very seriously. We treat your personal data confidentially and in accordance with the statutory data protection regulations and this privacy policy.'}
-            </p>
+            {/* 3. Cookies */}
+            <div className="mb-8">
+              <h2 className="text-xl font-semibold text-foreground mb-4">
+                {language === 'de' ? '3. Cookies' : '3. Cookies'}
+              </h2>
+              <p className="text-muted-foreground">
+                {language === 'de'
+                  ? 'Unsere Website verwendet keine Cookies, die personenbezogene Daten speichern oder Nutzer verfolgen.'
+                  : 'Our website does not use cookies that store personal data or track users.'}
+              </p>
+            </div>
 
-            <h3>{language === 'de' ? 'Verantwortliche Stelle' : 'Responsible Entity'}</h3>
-            <p>
-              {language === 'de' ? 'Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:' : 'The responsible entity for data processing on this website is:'}
-            </p>
-            <p>
-              Förderverein NAK Alstertal e.V.<br />
-              Musterstraße 123<br />
-              22297 Hamburg<br />
-              E-Mail: info@nak-alstertal.de
-            </p>
+            {/* 4. Weitergabe */}
+            <div className="mb-8">
+              <h2 className="text-xl font-semibold text-foreground mb-4">
+                {language === 'de' ? '4. Weitergabe von Daten' : '4. Data Sharing'}
+              </h2>
+              <p className="text-muted-foreground">
+                {language === 'de'
+                  ? 'Ihre Daten werden nicht an Dritte weitergegeben.'
+                  : 'Your data will not be shared with third parties.'}
+              </p>
+            </div>
 
-            <h3>{language === 'de' ? 'Widerruf Ihrer Einwilligung zur Datenverarbeitung' : 'Revocation of Your Consent to Data Processing'}</h3>
-            <p>
-              {language === 'de'
-                ? 'Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits erteilte Einwilligung jederzeit widerrufen. Dazu reicht eine formlose Mitteilung per E-Mail an uns.'
-                : 'Many data processing operations are only possible with your express consent. You can revoke consent you have already given at any time. An informal email to us is sufficient.'}
-            </p>
+            {/* 5. Speicherdauer */}
+            <div className="mb-8">
+              <h2 className="text-xl font-semibold text-foreground mb-4">
+                {language === 'de' ? '5. Speicherdauer' : '5. Storage Duration'}
+              </h2>
+              <p className="text-muted-foreground">
+                {language === 'de'
+                  ? 'Server-Logfiles werden nur so lange gespeichert, wie dies aus technischen oder sicherheitsrelevanten Gründen erforderlich ist, und anschließend gelöscht.'
+                  : 'Server log files are only stored for as long as necessary for technical or security reasons, and then deleted.'}
+              </p>
+            </div>
 
-            <h2>{language === 'de' ? '4. Datenerfassung auf dieser Website' : '4. Data Collection on This Website'}</h2>
-            
-            <h3>Cookies</h3>
-            <p>
-              {language === 'de'
-                ? 'Diese Website verwendet keine Cookies zur Analyse des Nutzerverhaltens.'
-                : 'This website does not use cookies to analyze user behavior.'}
-            </p>
+            {/* 6. Ihre Rechte */}
+            <div className="mb-8">
+              <h2 className="text-xl font-semibold text-foreground mb-4">
+                {language === 'de' ? '6. Ihre Rechte' : '6. Your Rights'}
+              </h2>
+              <div className="text-muted-foreground space-y-4">
+                <p>{language === 'de' ? 'Sie haben jederzeit folgende Rechte:' : 'You have the following rights at any time:'}</p>
+                <ul className="list-disc list-inside space-y-1 ml-4">
+                  <li>{language === 'de' ? 'Auskunft über Ihre gespeicherten Daten' : 'Information about your stored data'}</li>
+                  <li>{language === 'de' ? 'Berichtigung unrichtiger Daten' : 'Correction of inaccurate data'}</li>
+                  <li>{language === 'de' ? 'Löschung Ihrer Daten' : 'Deletion of your data'}</li>
+                  <li>{language === 'de' ? 'Einschränkung der Verarbeitung' : 'Restriction of processing'}</li>
+                  <li>{language === 'de' ? 'Widerspruch gegen die Verarbeitung' : 'Objection to processing'}</li>
+                </ul>
+                <p>
+                  {language === 'de'
+                    ? 'Außerdem haben Sie das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.'
+                    : 'You also have the right to lodge a complaint with a data protection supervisory authority.'}
+                </p>
+              </div>
+            </div>
 
-            <h3>{language === 'de' ? 'Kontaktaufnahme' : 'Contact'}</h3>
-            <p>
-              {language === 'de'
-                ? 'Wenn Sie uns per E-Mail kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet.'
-                : 'If you contact us by email, your request including all personal data arising from it will be stored and processed by us for the purpose of handling your request.'}
-            </p>
+            {/* 7. Kontakt */}
+            <div className="mb-8">
+              <h2 className="text-xl font-semibold text-foreground mb-4">
+                {language === 'de' ? '7. Kontakt' : '7. Contact'}
+              </h2>
+              <p className="text-muted-foreground">
+                {language === 'de'
+                  ? 'Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte an:'
+                  : 'If you have questions about data protection, please contact us at:'}
+                {' '}
+                <a href="mailto:verein@nak-alstertal.de" className="hover:text-primary transition-colors">
+                  verein@nak-alstertal.de
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </section>
