@@ -1,25 +1,22 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Layout } from '@/components/layout/Layout';
+import { HeroBanner } from '@/components/HeroBanner';
 
 export default function Imprint() {
   const { language } = useLanguage();
 
+  const title = language === 'de' ? 'Impressum' : 'Imprint';
+  const subtitle = language === 'de' 
+    ? 'Herzlich Willkommen auf der Website des Fördervereins der Neuapostolischen Kirchengemeinde Hamburg-Alstertal e.V.!'
+    : 'Welcome to the website of the Förderverein der Neuapostolischen Kirchengemeinde Hamburg-Alstertal e.V.!';
+
   return (
     <Layout>
+      <HeroBanner title={title} subtitle={subtitle} />
+      
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="mx-auto max-w-4xl">
-            {/* Welcome Text */}
-            <p className="text-lg text-muted-foreground mb-8">
-              {language === 'de' 
-                ? 'Herzlich Willkommen auf der Website des Fördervereins der Neuapostolischen Kirchengemeinde Hamburg-Alstertal e.V.!'
-                : 'Welcome to the website of the Förderverein der Neuapostolischen Kirchengemeinde Hamburg-Alstertal e.V.!'}
-            </p>
-
-            {/* Impressum Heading */}
-            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
-              {language === 'de' ? 'Impressum' : 'Imprint'}
-            </h1>
 
             {/* Two Column Layout for Address, Board, Contact */}
             <div className="grid md:grid-cols-2 gap-8 mb-12">
