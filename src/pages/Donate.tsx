@@ -51,7 +51,7 @@ export default function Donate() {
                 </CardDescription>
                 <Button size="lg" className="w-full bg-[#0070ba] hover:bg-[#005ea6] text-white" asChild>
                   <a 
-                    href="https://www.paypal.com/donate" 
+                    href="https://paypal.me/nakalstertal" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
