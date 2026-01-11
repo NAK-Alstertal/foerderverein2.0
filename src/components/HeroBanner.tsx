@@ -8,7 +8,7 @@ interface HeroBannerProps {
 
 export function HeroBanner({ title, subtitle }: HeroBannerProps) {
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden">
+    <section className="relative py-28 md:py-40 overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
