@@ -17,7 +17,7 @@ export default function Membership() {
 
   return (
     <Layout>
-      <HeroBanner title={t('membership.title')} />
+      <HeroBanner title={t('membership.title')} subtitle={t('membership.subtitle')} />
 
       {/* Content */}
       <section className="py-16 md:py-24">
