@@ -39,7 +39,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Membership
     'membership.title': 'Mitglied werden',
-    'membership.intro': 'Werden Sie Teil unserer Gemeinschaft und unterstützen Sie unsere Arbeit.',
+    'membership.intro': 'Wir laden alle ein, die unsere Ziele und Werte teilen, Teil unseres Fördervereins zu werden. Als Mitglied unterstützt du aktiv die in unserer Satzung festgelegten Zwecke und trägst dazu bei, unsere Gemeindearbeit und gemeinnützigen Projekte zu fördern. Jede natürliche oder juristische Person kann Mitglied werden, die unsere Ziele unterstützt und bereit ist, die Satzung des Vereins anzuerkennen. Es gibt keine weiteren Einschränkungen außer den üblichen gesetzlichen Vorgaben für die Mitgliedschaft in Vereinen.',
     'membership.benefits.title': 'Vorteile der Mitgliedschaft',
     'membership.benefits.1': 'Aktive Mitgestaltung der Vereinsarbeit',
     'membership.benefits.2': 'Einladungen zu exklusiven Veranstaltungen',
@@ -117,7 +117,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Membership
     'membership.title': 'Become a Member',
-    'membership.intro': 'Become part of our community and support our work.',
+    'membership.intro': 'We invite everyone who shares our goals and values to become part of our support association. As a member, you actively support the purposes set out in our statutes and contribute to promoting our community work and charitable projects. Any natural or legal person who supports our goals and is willing to recognize the statutes of the association can become a member. There are no further restrictions other than the usual legal requirements for membership in associations.',
     'membership.benefits.title': 'Membership Benefits',
     'membership.benefits.1': 'Active participation in association activities',
     'membership.benefits.2': 'Invitations to exclusive events',
