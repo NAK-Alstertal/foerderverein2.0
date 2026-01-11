@@ -10,7 +10,7 @@ export default function About() {
 
   return (
     <Layout>
-      <HeroBanner title={t('about.title')} />
+      <HeroBanner title={t('about.title')} subtitle={t('about.subtitle')} />
 
       {/* Content */}
       <section className="py-16 md:py-24">
