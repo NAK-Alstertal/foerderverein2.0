@@ -54,8 +54,8 @@ export default function Contact() {
                 <CardContent>
                   <address className="not-italic text-muted-foreground space-y-1">
                     <p className="font-semibold text-foreground">Förderverein NAK Alstertal e.V.</p>
-                    <p>Musterstraße 123</p>
-                    <p>22297 Hamburg</p>
+                    <p>Dweerblöcken 8</p>
+                    <p>22393 Hamburg</p>
                     <p>Deutschland</p>
                   </address>
                 </CardContent>
