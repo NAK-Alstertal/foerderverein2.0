@@ -1,16 +1,17 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Layout } from '@/components/layout/Layout';
+import { HeroBanner } from '@/components/HeroBanner';
 
 export default function Imprint() {
   const { language } = useLanguage();
 
   return (
     <Layout>
+      <HeroBanner title={language === 'de' ? 'Impressum' : 'Imprint'} />
+
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="mx-auto max-w-3xl prose prose-slate dark:prose-invert">
-            <h1>{language === 'de' ? 'Impressum' : 'Imprint'}</h1>
-
             <h2>{language === 'de' ? 'Angaben gemäß § 5 TMG' : 'Information according to § 5 TMG'}</h2>
             <p>
               Förderverein NAK Alstertal e.V.<br />

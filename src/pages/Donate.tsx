@@ -1,5 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Layout } from '@/components/layout/Layout';
+import { HeroBanner } from '@/components/HeroBanner';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Landmark, CreditCard, Receipt, ExternalLink } from 'lucide-react';
@@ -9,19 +10,10 @@ export default function Donate() {
 
   return (
     <Layout>
-      {/* Hero */}
-      <section className="hero-gradient py-16 md:py-24">
-        <div className="container">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="animate-fade-up text-4xl font-bold tracking-tight text-primary-foreground md:text-5xl">
-              {t('donate.title')}
-            </h1>
-            <p className="animate-fade-up animation-delay-200 mt-6 text-lg text-primary-foreground/90">
-              {t('donate.intro')}
-            </p>
-          </div>
-        </div>
-      </section>
+      <HeroBanner 
+        title={t('donate.title')} 
+        subtitle={t('donate.intro')} 
+      />
 
       {/* Content */}
       <section className="py-16 md:py-24">

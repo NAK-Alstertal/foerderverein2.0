@@ -1,5 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Layout } from '@/components/layout/Layout';
+import { HeroBanner } from '@/components/HeroBanner';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { FileText, Target, Users } from 'lucide-react';
@@ -9,16 +10,7 @@ export default function About() {
 
   return (
     <Layout>
-      {/* Hero */}
-      <section className="hero-gradient py-16 md:py-24">
-        <div className="container">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="animate-fade-up text-4xl font-bold tracking-tight text-primary-foreground md:text-5xl">
-              {t('about.title')}
-            </h1>
-          </div>
-        </div>
-      </section>
+      <HeroBanner title={t('about.title')} />
 
       {/* Content */}
       <section className="py-16 md:py-24">
