@@ -4,6 +4,7 @@ import { HeroBanner } from '@/components/HeroBanner';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { FileText, CreditCard, Users, Download } from 'lucide-react';
+import gemeinschaft from '@/assets/gemeinschaft.png';
 
 export default function Membership() {
   const { t } = useLanguage();
@@ -22,7 +23,7 @@ export default function Membership() {
               <Card className="group animate-fade-up overflow-hidden">
                 <div className="relative h-40 overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=400&h=250&fit=crop" 
+                    src={gemeinschaft}
                     alt="Werde Teil unseres Vereins"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
