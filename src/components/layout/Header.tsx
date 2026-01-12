@@ -32,7 +32,7 @@ export function Header() {
           <img 
             src={logo} 
             alt="Förderverein NAK Alstertal Logo" 
-            className="h-11 w-11 rounded-lg"
+            className="h-11 w-11 rounded-lg transition-transform duration-200 hover:scale-110"
           />
         </Link>
 
