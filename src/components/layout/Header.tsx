@@ -28,15 +28,12 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3">
+        <Link to="/" className="flex items-center">
           <img 
             src={logo} 
             alt="Förderverein NAK Alstertal Logo" 
             className="h-11 w-11 rounded-lg"
           />
-          <span className="hidden font-semibold text-foreground sm:inline-block">
-            Förderverein Alstertal
-          </span>
         </Link>
 
         {/* Desktop Navigation */}
