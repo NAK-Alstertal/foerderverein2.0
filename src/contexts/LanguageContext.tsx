@@ -69,7 +69,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // News
     'news.title': 'Aktuelles',
-    'news.subtitle': 'Neuigkeiten und Veranstaltungen aus unserem Verein',
+    'news.subtitle': 'Neuigkeiten und Veranstaltungen aus unserem Verein.',
 
     // Gallery
     'gallery.title': 'Bildergalerie',
