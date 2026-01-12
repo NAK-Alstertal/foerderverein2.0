@@ -3,7 +3,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Layout } from '@/components/layout/Layout';
-import { ArrowRight, Heart, Users, Calendar, ImageIcon } from 'lucide-react';
+import { ArrowRight, Heart, Users, Calendar } from 'lucide-react';
 import churchIllustration from '@/assets/church-illustration.png';
 
 export default function Home() {
@@ -30,13 +30,6 @@ export default function Home() {
       description: 'Aktuelle Neuigkeiten und Veranstaltungen.',
       descriptionEn: 'Current news and events.',
       href: '/news',
-    },
-    {
-      icon: ImageIcon,
-      title: t('nav.gallery'),
-      description: 'Eindrücke aus unserem Vereinsleben.',
-      descriptionEn: 'Impressions from our association life.',
-      href: '/gallery',
     },
   ];
 

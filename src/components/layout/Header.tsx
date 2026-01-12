@@ -17,7 +17,6 @@ export function Header() {
     { href: '/membership', label: t('nav.membership') },
     { href: '/donate', label: t('nav.donate') },
     { href: '/news', label: t('nav.news') },
-    { href: '/gallery', label: t('nav.gallery') },
     { href: '/contact', label: t('nav.contact') },
   ];
 
