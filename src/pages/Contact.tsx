@@ -23,11 +23,19 @@ export default function Contact() {
           <div className="mx-auto max-w-2xl">
             <div className="grid gap-8 md:grid-cols-2">
               {/* Email */}
-              <Card className="animate-fade-up">
-                <CardHeader>
-                  <div className="mb-2 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                    <Mail className="h-6 w-6" />
+              <Card className="group animate-fade-up overflow-hidden">
+                <div className="relative h-40 overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=400&h=250&fit=crop" 
+                    alt="E-Mail"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+                  <div className="absolute bottom-3 left-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-lg">
+                    <Mail className="h-5 w-5" />
                   </div>
+                </div>
+                <CardHeader className="pt-4 pb-2">
                   <CardTitle>E-Mail</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -44,11 +52,19 @@ export default function Contact() {
               </Card>
 
               {/* Address */}
-              <Card className="animate-fade-up animation-delay-100">
-                <CardHeader>
-                  <div className="mb-2 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                    <MapPin className="h-6 w-6" />
+              <Card className="group animate-fade-up animation-delay-100 overflow-hidden">
+                <div className="relative h-40 overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&h=250&fit=crop" 
+                    alt={t('contact.address.title')}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+                  <div className="absolute bottom-3 left-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-lg">
+                    <MapPin className="h-5 w-5" />
                   </div>
+                </div>
+                <CardHeader className="pt-4 pb-2">
                   <CardTitle>{t('contact.address.title')}</CardTitle>
                 </CardHeader>
                 <CardContent>

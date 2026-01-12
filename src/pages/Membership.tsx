@@ -3,10 +3,10 @@ import { Layout } from '@/components/layout/Layout';
 import { HeroBanner } from '@/components/HeroBanner';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { FileText, Check, CreditCard, Users } from 'lucide-react';
+import { FileText, CreditCard, Users } from 'lucide-react';
 
 export default function Membership() {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
 
   return (
     <Layout>
@@ -19,11 +19,19 @@ export default function Membership() {
             {/* Linke Spalte - Info-Kacheln */}
             <div className="space-y-6">
               {/* Intro Card */}
-              <Card className="animate-fade-up">
-                <CardHeader>
-                  <div className="mb-2 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                    <Users className="h-6 w-6" />
+              <Card className="group animate-fade-up overflow-hidden">
+                <div className="relative h-40 overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=400&h=250&fit=crop" 
+                    alt="Werde Teil unseres Vereins"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+                  <div className="absolute bottom-3 left-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-lg">
+                    <Users className="h-5 w-5" />
                   </div>
+                </div>
+                <CardHeader className="pt-4 pb-2">
                   <CardTitle>Werde Teil unseres Vereins</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -34,11 +42,19 @@ export default function Membership() {
               </Card>
 
               {/* Fee Card */}
-              <Card className="animate-fade-up animation-delay-100">
-                <CardHeader>
-                <div className="mb-2 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-blue-500/10 text-blue-500">
-                  <CreditCard className="h-6 w-6" />
+              <Card className="group animate-fade-up animation-delay-100 overflow-hidden">
+                <div className="relative h-40 overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=400&h=250&fit=crop" 
+                    alt={t('membership.fee.title')}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+                  <div className="absolute bottom-3 left-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500 text-white shadow-lg">
+                    <CreditCard className="h-5 w-5" />
+                  </div>
                 </div>
+                <CardHeader className="pt-4 pb-2">
                   <CardTitle>{t('membership.fee.title')}</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -52,8 +68,19 @@ export default function Membership() {
             {/* Rechte Spalte - Dokument-Kacheln */}
             <div className="space-y-6">
               {/* Mitgliedsantrag Card */}
-              <Card className="animate-fade-up animation-delay-200">
-                <CardHeader>
+              <Card className="group animate-fade-up animation-delay-200 overflow-hidden">
+                <div className="relative h-40 overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=400&h=250&fit=crop" 
+                    alt={t('membership.title')}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+                  <div className="absolute bottom-3 left-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-lg">
+                    <FileText className="h-5 w-5" />
+                  </div>
+                </div>
+                <CardHeader className="pt-4 pb-2">
                   <CardTitle>{t('membership.title')}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
@@ -74,8 +101,19 @@ export default function Membership() {
               </Card>
 
               {/* SEPA Card */}
-              <Card className="animate-fade-up animation-delay-300">
-                <CardHeader>
+              <Card className="group animate-fade-up animation-delay-300 overflow-hidden">
+                <div className="relative h-40 overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop" 
+                    alt={t('membership.sepa.title')}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+                  <div className="absolute bottom-3 left-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-lg">
+                    <FileText className="h-5 w-5" />
+                  </div>
+                </div>
+                <CardHeader className="pt-4 pb-2">
                   <CardTitle>{t('membership.sepa.title')}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
