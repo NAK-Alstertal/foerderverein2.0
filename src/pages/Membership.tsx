@@ -89,7 +89,7 @@ export default function Membership() {
                       rel="noopener noreferrer"
                     >
                       <FileText className="mr-2 h-4 w-4" />
-                      SEPA-Lastschriftmandat herunterladen
+                      SEPA-Lastschriftmandat herunterladen (PDF)
                     </a>
                   </Button>
                 </CardContent>
