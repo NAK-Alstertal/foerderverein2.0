@@ -9,7 +9,6 @@ import About from "./pages/About";
 import Membership from "./pages/Membership";
 import Donate from "./pages/Donate";
 import News from "./pages/News";
-import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import Imprint from "./pages/Imprint";
 import Privacy from "./pages/Privacy";
@@ -30,7 +29,6 @@ const App = () => (
             <Route path="/membership" element={<Membership />} />
             <Route path="/donate" element={<Donate />} />
             <Route path="/news" element={<News />} />
-            <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/imprint" element={<Imprint />} />
             <Route path="/privacy" element={<Privacy />} />
