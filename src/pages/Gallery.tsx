@@ -40,7 +40,7 @@ export default function Gallery() {
       />
 
       {/* Gallery Grid */}
-      <section className="py-16 md:py-24">
+      <section className="pt-8 pb-16 md:pt-12 md:pb-24">
         <div className="container">
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {galleryImages.map((image, index) => (

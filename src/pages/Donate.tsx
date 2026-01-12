@@ -16,7 +16,7 @@ export default function Donate() {
       />
 
       {/* Content */}
-      <section className="py-16 md:py-24">
+      <section className="pt-8 pb-16 md:pt-12 md:pb-24">
         <div className="container">
           <div className="grid gap-8 lg:grid-cols-2">
             {/* Bank Transfer */}

@@ -13,7 +13,7 @@ export default function Membership() {
       <HeroBanner title={t('membership.title')} subtitle={t('membership.subtitle')} />
 
       {/* Content */}
-      <section className="py-16 md:py-24">
+      <section className="pt-8 pb-16 md:pt-12 md:pb-24">
         <div className="container max-w-6xl">
           <div className="grid gap-8 md:grid-cols-2">
             {/* Linke Spalte - Info-Kacheln */}

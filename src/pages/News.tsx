@@ -76,7 +76,7 @@ export default function News() {
       />
 
       {/* News List */}
-      <section className="py-16 md:py-24">
+      <section className="pt-8 pb-16 md:pt-12 md:pb-24">
         <div className="container">
           <div className="mx-auto max-w-3xl space-y-6">
             {newsItems.map((item, index) => (
