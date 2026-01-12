@@ -93,8 +93,8 @@ export default function Membership() {
                       target="_blank" 
                       rel="noopener noreferrer"
                     >
-                      <FileText className="mr-2 h-4 w-4" />
-                      {t('membership.form.download')}
+                      <Download className="mr-2 h-4 w-4" />
+                      Mitgliedsantrag (PDF)
                     </a>
                   </Button>
                 </CardContent>
