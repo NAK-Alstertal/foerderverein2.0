@@ -80,10 +80,20 @@ export default function Membership() {
                 <CardHeader>
                   <CardTitle>{t('membership.sepa.title')}</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="space-y-4">
                   <CardDescription className="text-base">
                     {t('membership.sepa.text')}
                   </CardDescription>
+                  <Button variant="outline" asChild>
+                    <a 
+                      href="/documents/sepa-lastschriftmandat.pdf" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <FileText className="mr-2 h-4 w-4" />
+                      SEPA-Lastschriftmandat herunterladen
+                    </a>
+                  </Button>
                 </CardContent>
               </Card>
             </div>
