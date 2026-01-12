@@ -31,7 +31,8 @@ export function Footer() {
                 className="h-11 w-11 rounded-lg"
               />
               <span className="font-semibold text-foreground">
-                Förderverein Alstertal
+                Förderverein der Neuapostolischen Kirchengemeinde<br />
+                Hamburg-Alstertal e.V.
               </span>
             </div>
             <p className="text-sm text-muted-foreground max-w-xs">
