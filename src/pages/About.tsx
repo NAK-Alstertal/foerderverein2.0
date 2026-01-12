@@ -3,7 +3,7 @@ import { Layout } from '@/components/layout/Layout';
 import { HeroBanner } from '@/components/HeroBanner';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { FileText, Target, Users } from 'lucide-react';
+import { FileText, Target, Users, Download } from 'lucide-react';
 
 export default function About() {
   const { t, language } = useLanguage();
@@ -86,8 +86,8 @@ export default function About() {
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
-                    <FileText className="mr-2 h-4 w-4" />
-                    {t('about.statute.download')}
+                    <Download className="mr-2 h-4 w-4" />
+                    Satzung (PDF)
                   </a>
                 </Button>
               </CardContent>
