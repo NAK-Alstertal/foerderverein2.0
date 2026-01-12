@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <Layout>
       {/* Hero Section with Church Illustration */}
-      <section className="relative overflow-hidden">
+      <section className="relative h-[280px] md:h-[360px] flex items-center overflow-hidden">
         {/* Background with church illustration */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -63,7 +63,7 @@ export default function Home() {
           <div className="flex-1 bg-[hsl(var(--logo-purple))]" />
         </div>
         
-        <div className="container relative py-24 md:py-36">
+        <div className="container relative">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="animate-fade-up text-4xl font-bold tracking-tight text-white drop-shadow-lg md:text-5xl lg:text-6xl">
               {t('hero.title')}
