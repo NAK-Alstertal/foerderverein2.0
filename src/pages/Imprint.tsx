@@ -18,6 +18,9 @@ export default function Imprint() {
         <div className="container">
           <div className="mx-auto max-w-4xl">
 
+            {/* Subtitle */}
+            <p className="text-muted-foreground mb-8">Angaben gemäß § 5 TMG</p>
+
             {/* Two Column Layout for Address, Board, Contact */}
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               {/* Left Column - Address */}
