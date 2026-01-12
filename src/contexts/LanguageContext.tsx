@@ -23,7 +23,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Hero
     'hero.title': 'Förderverein NAK Alstertal',
-    'hero.subtitle': 'Gemeinsam Gutes tun – für unsere Gemeinde und darüber hinaus',
+    'hero.subtitle': 'Gemeinsam Gutes tun – für unsere Gemeinde und darüber hinaus.',
     'hero.cta.membership': 'Mitglied werden',
     'hero.cta.donate': 'Jetzt spenden',
 
@@ -103,7 +103,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Hero
     'hero.title': 'Förderverein NAK Alstertal',
-    'hero.subtitle': 'Doing good together – for our community and beyond',
+    'hero.subtitle': 'Doing good together – for our community and beyond.',
     'hero.cta.membership': 'Become a Member',
     'hero.cta.donate': 'Donate Now',
 
