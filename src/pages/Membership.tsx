@@ -51,30 +51,8 @@ export default function Membership() {
 
             {/* Rechte Spalte - Dokument-Kacheln */}
             <div className="space-y-6">
-              {/* SEPA Card */}
-              <Card className="animate-fade-up animation-delay-200">
-                <CardHeader>
-                  <CardTitle>{t('membership.sepa.title')}</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <CardDescription className="text-base">
-                    {t('membership.sepa.text')}
-                  </CardDescription>
-                  <Button className="bg-orange-500 hover:bg-orange-600 text-white" asChild>
-                    <a 
-                      href="/documents/sepa-lastschriftmandat.pdf" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                    >
-                      <FileText className="mr-2 h-4 w-4" />
-                      SEPA-Lastschriftmandat herunterladen
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
-
               {/* Mitgliedsantrag Card */}
-              <Card className="animate-fade-up animation-delay-300">
+              <Card className="animate-fade-up animation-delay-200">
                 <CardHeader>
                   <CardTitle>{t('membership.title')}</CardTitle>
                 </CardHeader>
@@ -90,6 +68,28 @@ export default function Membership() {
                     >
                       <FileText className="mr-2 h-4 w-4" />
                       {t('membership.form.download')}
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* SEPA Card */}
+              <Card className="animate-fade-up animation-delay-300">
+                <CardHeader>
+                  <CardTitle>{t('membership.sepa.title')}</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <CardDescription className="text-base">
+                    {t('membership.sepa.text')}
+                  </CardDescription>
+                  <Button className="bg-orange-500 hover:bg-orange-600 text-white" asChild>
+                    <a 
+                      href="/documents/sepa-lastschriftmandat.pdf" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <FileText className="mr-2 h-4 w-4" />
+                      SEPA-Lastschriftmandat herunterladen
                     </a>
                   </Button>
                 </CardContent>
