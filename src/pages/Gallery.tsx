@@ -12,14 +12,20 @@ interface GalleryImage {
   category: string;
 }
 
-// Placeholder images - replace with actual images
+// Beispielbilder für die Galerie
 const galleryImages: GalleryImage[] = [
-  { id: 1, src: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80', alt: 'Gemeinde Event', category: 'events' },
-  { id: 2, src: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=800&q=80', alt: 'Gemeinschaft', category: 'community' },
-  { id: 3, src: 'https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=800&q=80', alt: 'Helfer', category: 'volunteers' },
-  { id: 4, src: 'https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=800&q=80', alt: 'Veranstaltung', category: 'events' },
-  { id: 5, src: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&q=80', alt: 'Kirche', category: 'church' },
-  { id: 6, src: 'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=800&q=80', alt: 'Feier', category: 'events' },
+  { id: 1, src: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&q=80', alt: 'Kirchengebäude', category: 'church' },
+  { id: 2, src: 'https://images.unsplash.com/photo-1548625149-fc4a29cf7092?w=800&q=80', alt: 'Kirchenfenster', category: 'church' },
+  { id: 3, src: 'https://images.unsplash.com/photo-1507692049790-de58290a4334?w=800&q=80', alt: 'Gottesdienst', category: 'church' },
+  { id: 4, src: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80', alt: 'Sommerfest 2025', category: 'events' },
+  { id: 5, src: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=800&q=80', alt: 'Gemeinschaft', category: 'community' },
+  { id: 6, src: 'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=800&q=80', alt: 'Weihnachtskonzert 2025', category: 'events' },
+  { id: 7, src: 'https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=800&q=80', alt: 'Ehrenamtliche Helfer', category: 'volunteers' },
+  { id: 8, src: 'https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=800&q=80', alt: 'Neujahrsempfang 2026', category: 'events' },
+  { id: 9, src: 'https://images.unsplash.com/photo-1540553016722-983e48a2cd10?w=800&q=80', alt: 'Orgel', category: 'church' },
+  { id: 10, src: 'https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=800&q=80', alt: 'Bibel und Gesangbuch', category: 'church' },
+  { id: 11, src: 'https://images.unsplash.com/photo-1523803326055-9729b9e02e5a?w=800&q=80', alt: 'Jahreshauptversammlung', category: 'events' },
+  { id: 12, src: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=800&q=80', alt: 'Vereinsmitglieder', category: 'community' },
 ];
 
 export default function Gallery() {
