@@ -3,7 +3,7 @@ import { Layout } from '@/components/layout/Layout';
 import { HeroBanner } from '@/components/HeroBanner';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { FileText, CreditCard, Users } from 'lucide-react';
+import { FileText, CreditCard, Users, Download } from 'lucide-react';
 
 export default function Membership() {
   const { t } = useLanguage();
@@ -126,8 +126,8 @@ export default function Membership() {
                       target="_blank" 
                       rel="noopener noreferrer"
                     >
-                      <FileText className="mr-2 h-4 w-4" />
-                      SEPA-Lastschriftmandat herunterladen (PDF)
+                      <Download className="mr-2 h-4 w-4" />
+                      SEPA-Lastschriftmandat (PDF)
                     </a>
                   </Button>
                 </CardContent>
