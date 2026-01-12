@@ -38,27 +38,6 @@ export default function Membership() {
               </CardContent>
             </Card>
 
-            {/* Benefits */}
-            <Card className="animate-fade-up animation-delay-100">
-              <CardHeader>
-                <div className="mb-2 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                  <Check className="h-6 w-6" />
-                </div>
-                <CardTitle>{t('membership.benefits.title')}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3">
-                  {benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                        <Check className="h-3 w-3" />
-                      </div>
-                      <span className="text-muted-foreground">{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
 
             {/* Fee & SEPA */}
             <div className="space-y-6">
