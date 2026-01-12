@@ -58,7 +58,7 @@ export default function About() {
                 <CardDescription className="text-base mb-4">
                   {t('about.statute.text')}
                 </CardDescription>
-                <Button variant="outline" asChild>
+                <Button asChild className="bg-orange-500 hover:bg-orange-600 text-white">
                   <a 
                     href={language === 'de' ? '/documents/satzung-de.pdf' : '/documents/satzung-en.pdf'} 
                     target="_blank" 
