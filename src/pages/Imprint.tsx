@@ -6,9 +6,7 @@ export default function Imprint() {
   const { language } = useLanguage();
 
   const title = language === 'de' ? 'Impressum' : 'Imprint';
-  const subtitle = language === 'de' 
-    ? 'Herzlich Willkommen auf der Website des Fördervereins der Neuapostolischen Kirchengemeinde Hamburg-Alstertal e.V.!'
-    : 'Welcome to the website of the Förderverein der Neuapostolischen Kirchengemeinde Hamburg-Alstertal e.V.!';
+  const subtitle = language === 'de' ? 'Angaben gemäß § 5 TMG' : 'Information according to § 5 TMG';
 
   return (
     <Layout>
@@ -17,9 +15,6 @@ export default function Imprint() {
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="mx-auto max-w-4xl">
-
-            {/* Subtitle */}
-            <p className="text-muted-foreground mb-8">Angaben gemäß § 5 TMG</p>
 
             {/* Two Column Layout for Address, Board, Contact */}
             <div className="grid md:grid-cols-2 gap-8 mb-12">
