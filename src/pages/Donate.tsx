@@ -20,11 +20,19 @@ export default function Donate() {
         <div className="container">
           <div className="grid gap-8 lg:grid-cols-2">
             {/* Bank Transfer */}
-            <Card className="animate-fade-up">
-              <CardHeader>
-                <div className="mb-2 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                  <Landmark className="h-6 w-6" />
+            <Card className="group animate-fade-up overflow-hidden">
+              <div className="relative h-40 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=250&fit=crop" 
+                  alt={t('donate.bank.title')}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+                <div className="absolute bottom-3 left-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-lg">
+                  <Landmark className="h-5 w-5" />
                 </div>
+              </div>
+              <CardHeader className="pt-4 pb-2">
                 <CardTitle>{t('donate.bank.title')}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -38,11 +46,19 @@ export default function Donate() {
             </Card>
 
             {/* PayPal */}
-            <Card className="animate-fade-up animation-delay-100">
-              <CardHeader>
-                <div className="mb-2 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-blue-500/10 text-blue-500">
-                  <CreditCard className="h-6 w-6" />
+            <Card className="group animate-fade-up animation-delay-100 overflow-hidden">
+              <div className="relative h-40 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop" 
+                  alt={t('donate.paypal.title')}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+                <div className="absolute bottom-3 left-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500 text-white shadow-lg">
+                  <CreditCard className="h-5 w-5" />
                 </div>
+              </div>
+              <CardHeader className="pt-4 pb-2">
                 <CardTitle>{t('donate.paypal.title')}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -64,11 +80,19 @@ export default function Donate() {
           </div>
 
           {/* Receipt Info */}
-          <Card className="mt-8 animate-fade-up animation-delay-200">
-            <CardHeader>
-              <div className="mb-2 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                <Receipt className="h-6 w-6" />
+          <Card className="group mt-8 animate-fade-up animation-delay-200 overflow-hidden">
+            <div className="relative h-40 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800&h=250&fit=crop" 
+                alt={t('donate.receipt.title')}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+              <div className="absolute bottom-3 left-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-lg">
+                <Receipt className="h-5 w-5" />
               </div>
+            </div>
+            <CardHeader className="pt-4 pb-2">
               <CardTitle>{t('donate.receipt.title')}</CardTitle>
             </CardHeader>
             <CardContent>
