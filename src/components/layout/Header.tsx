@@ -47,7 +47,7 @@ export function Header() {
               key={item.href}
               to={item.href}
               className={cn(
-                "px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-secondary hover:text-secondary-foreground",
+                "px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-orange-400/20 hover:text-orange-600",
                 location.pathname === item.href
                   ? "bg-orange-400/30 text-orange-600"
                   : "text-muted-foreground"
@@ -92,7 +92,7 @@ export function Header() {
                 to={item.href}
                 onClick={() => setIsMenuOpen(false)}
                 className={cn(
-                  "px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-secondary hover:text-secondary-foreground",
+                  "px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-orange-400/20 hover:text-orange-600",
                   location.pathname === item.href
                     ? "bg-orange-400/30 text-orange-600"
                     : "text-muted-foreground"
