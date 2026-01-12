@@ -34,7 +34,7 @@ export default function Contact() {
                   <CardDescription className="text-base mb-4">
                     Schreiben Sie uns eine E-Mail und wir melden uns schnellstmöglich bei Ihnen.
                   </CardDescription>
-                  <Button size="lg" asChild>
+                  <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white" asChild>
                     <a href={`mailto:${emailAddress}`}>
                       <Mail className="mr-2 h-4 w-4" />
                       {t('contact.email.button')}
