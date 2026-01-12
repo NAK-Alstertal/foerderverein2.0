@@ -49,7 +49,7 @@ export function Header() {
               className={cn(
                 "px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-secondary hover:text-secondary-foreground",
                 location.pathname === item.href
-                  ? "bg-orange-500 text-white"
+                  ? "bg-orange-400/30 text-orange-600"
                   : "text-muted-foreground"
               )}
             >
@@ -94,7 +94,7 @@ export function Header() {
                 className={cn(
                   "px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-secondary hover:text-secondary-foreground",
                   location.pathname === item.href
-                    ? "bg-orange-500 text-white"
+                    ? "bg-orange-400/30 text-orange-600"
                     : "text-muted-foreground"
                 )}
               >
