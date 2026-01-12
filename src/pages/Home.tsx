@@ -16,6 +16,7 @@ export default function Home() {
       description: 'Erfahren Sie mehr über unseren Verein und unsere Ziele.',
       descriptionEn: 'Learn more about our association and our goals.',
       href: '/about',
+      image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&h=250&fit=crop',
     },
     {
       icon: Heart,
@@ -23,6 +24,7 @@ export default function Home() {
       description: 'Unterstützen Sie unsere Arbeit mit einer Spende.',
       descriptionEn: 'Support our work with a donation.',
       href: '/donate',
+      image: 'https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400&h=250&fit=crop',
     },
     {
       icon: Calendar,
@@ -30,6 +32,7 @@ export default function Home() {
       description: 'Aktuelle Neuigkeiten und Veranstaltungen.',
       descriptionEn: 'Current news and events.',
       href: '/news',
+      image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400&h=250&fit=crop',
     },
   ];
 
@@ -82,13 +85,22 @@ export default function Home() {
             {features.map((feature, index) => (
               <Card 
                 key={feature.href} 
-                className={`group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-up`}
+                className={`group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-up overflow-hidden`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <CardHeader>
-                  <div className="mb-2 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                    <feature.icon className="h-6 w-6" />
+                {/* Card Image */}
+                <div className="relative h-40 overflow-hidden">
+                  <img 
+                    src={feature.image} 
+                    alt={feature.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+                  <div className="absolute bottom-3 left-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-lg">
+                    <feature.icon className="h-5 w-5" />
                   </div>
+                </div>
+                <CardHeader className="pt-4 pb-2">
                   <CardTitle className="text-lg">{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
