@@ -40,7 +40,7 @@ export default function Donate() {
             {/* PayPal */}
             <Card className="animate-fade-up animation-delay-100">
               <CardHeader>
-                <div className="mb-2 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 text-accent">
+                <div className="mb-2 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-blue-500/10 text-blue-500">
                   <CreditCard className="h-6 w-6" />
                 </div>
                 <CardTitle>{t('donate.paypal.title')}</CardTitle>
@@ -49,7 +49,7 @@ export default function Donate() {
                 <CardDescription className="text-base">
                   {t('donate.paypal.text')}
                 </CardDescription>
-                <Button size="lg" className="w-full bg-[#0070ba] hover:bg-[#005ea6] text-white" asChild>
+                <Button size="lg" className="w-full bg-orange-500 hover:bg-orange-600 text-white" asChild>
                   <a 
                     href="https://www.paypal.com/donate" 
                     target="_blank" 
