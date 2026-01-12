@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <Layout>
       {/* Hero Section with Church Illustration */}
-      <section className="relative h-[280px] md:h-[480px] flex items-center overflow-hidden">
+      <section className="relative h-[280px] md:h-[400px] flex items-center overflow-hidden">
         {/* Background with church illustration */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
