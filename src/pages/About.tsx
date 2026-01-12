@@ -4,6 +4,7 @@ import { HeroBanner } from '@/components/HeroBanner';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { FileText, Target, Users, Download } from 'lucide-react';
+import glaubeLiebe from '@/assets/glaube-liebe.png';
 
 export default function About() {
   const { t, language } = useLanguage();
@@ -13,7 +14,7 @@ export default function About() {
       icon: Target,
       title: t('about.purpose.title'),
       text: t('about.purpose.text'),
-      image: 'https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=400&h=250&fit=crop',
+      image: glaubeLiebe,
     },
     {
       icon: Users,
