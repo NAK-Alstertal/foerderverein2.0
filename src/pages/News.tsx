@@ -11,6 +11,7 @@ interface NewsItem {
   titleEn: string;
   contentDe: string;
   contentEn: string;
+  images: string[];
 }
 
 const newsItems: NewsItem[] = [
@@ -21,6 +22,10 @@ const newsItems: NewsItem[] = [
     titleEn: 'New Year Reception 2026',
     contentDe: 'Wir laden alle Mitglieder und Freunde des Vereins herzlich zu unserem traditionellen Neujahrsempfang am 18. Januar 2026 um 15:00 Uhr ein. Gemeinsam möchten wir auf das neue Jahr anstoßen und unsere Pläne für 2026 vorstellen.',
     contentEn: 'We cordially invite all members and friends of the association to our traditional New Year reception on January 18, 2026 at 3:00 PM. Together we would like to toast the new year and present our plans for 2026.',
+    images: [
+      'https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=600&q=80',
+      'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&q=80',
+    ],
   },
   {
     id: 2,
@@ -29,6 +34,11 @@ const newsItems: NewsItem[] = [
     titleEn: 'Christmas Concert in the Church',
     contentDe: 'Das diesjährige Weihnachtskonzert war ein voller Erfolg! Über 200 Besucher erlebten einen wunderbaren Abend mit festlicher Musik. Wir danken allen Mitwirkenden und Gästen für diesen besonderen Abend.',
     contentEn: 'This year\'s Christmas concert was a complete success! Over 200 visitors enjoyed a wonderful evening of festive music. We thank all participants and guests for this special evening.',
+    images: [
+      'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=600&q=80',
+      'https://images.unsplash.com/photo-1512733596533-7b00ccf8ebaf?w=600&q=80',
+      'https://images.unsplash.com/photo-1482575832494-771f74bf6857?w=600&q=80',
+    ],
   },
   {
     id: 3,
@@ -37,6 +47,10 @@ const newsItems: NewsItem[] = [
     titleEn: 'Church Window Restoration Completed',
     contentDe: 'Nach mehrmonatiger Arbeit ist die Restaurierung der historischen Kirchenfenster erfolgreich abgeschlossen. Die Fenster erstrahlen nun wieder in ihrer ursprünglichen Pracht. Ein großes Dankeschön an alle Spender!',
     contentEn: 'After several months of work, the restoration of the historic church windows has been successfully completed. The windows now shine again in their original splendor. A big thank you to all donors!',
+    images: [
+      'https://images.unsplash.com/photo-1548625149-fc4a29cf7092?w=600&q=80',
+      'https://images.unsplash.com/photo-1507692049790-de58290a4334?w=600&q=80',
+    ],
   },
   {
     id: 4,
@@ -45,6 +59,9 @@ const newsItems: NewsItem[] = [
     titleEn: 'Annual General Meeting 2025',
     contentDe: 'Bei der Jahreshauptversammlung wurden der Vorstand bestätigt und die Projekte für das kommende Jahr beschlossen. Wir freuen uns auf weitere gemeinsame Aktivitäten zur Erhaltung unserer Kirche.',
     contentEn: 'At the annual general meeting, the board was confirmed and projects for the coming year were approved. We look forward to further joint activities for the preservation of our church.',
+    images: [
+      'https://images.unsplash.com/photo-1523803326055-9729b9e02e5a?w=600&q=80',
+    ],
   },
   {
     id: 5,
@@ -53,6 +70,11 @@ const newsItems: NewsItem[] = [
     titleEn: 'Summer Festival in the Church Garden',
     contentDe: 'Unser Sommerfest lockte bei bestem Wetter zahlreiche Besucher an. Mit Kaffee, Kuchen und Live-Musik verbrachten wir einen unvergesslichen Nachmittag. Der Erlös kommt der Orgelrenovierung zugute.',
     contentEn: 'Our summer festival attracted numerous visitors in the best weather. With coffee, cake and live music, we spent an unforgettable afternoon. The proceeds will benefit the organ renovation.',
+    images: [
+      'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80',
+      'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600&q=80',
+      'https://images.unsplash.com/photo-1506784365847-bbad939e9335?w=600&q=80',
+    ],
   },
 ];
 
@@ -92,10 +114,22 @@ export default function News() {
                   </div>
                   <CardTitle>{language === 'de' ? item.titleDe : item.titleEn}</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="space-y-4">
                   <CardDescription className="text-base">
                     {language === 'de' ? item.contentDe : item.contentEn}
                   </CardDescription>
+                  {item.images.length > 0 && (
+                    <div className={`grid gap-3 ${item.images.length === 1 ? 'grid-cols-1' : item.images.length === 2 ? 'grid-cols-2' : 'grid-cols-3'}`}>
+                      {item.images.map((src, imgIndex) => (
+                        <img
+                          key={imgIndex}
+                          src={src}
+                          alt={`${language === 'de' ? item.titleDe : item.titleEn} - Bild ${imgIndex + 1}`}
+                          className="w-full h-32 md:h-40 object-cover rounded-lg"
+                        />
+                      ))}
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             ))}
