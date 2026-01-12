@@ -36,9 +36,9 @@ export default function Membership() {
               {/* Fee Card */}
               <Card className="animate-fade-up animation-delay-100">
                 <CardHeader>
-                  <div className="mb-2 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 text-accent">
-                    <CreditCard className="h-6 w-6" />
-                  </div>
+                <div className="mb-2 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-blue-500/10 text-blue-500">
+                  <CreditCard className="h-6 w-6" />
+                </div>
                   <CardTitle>{t('membership.fee.title')}</CardTitle>
                 </CardHeader>
                 <CardContent>
