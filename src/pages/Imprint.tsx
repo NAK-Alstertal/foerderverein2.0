@@ -31,6 +31,10 @@ export default function Imprint() {
                   Dweerblöcken 8<br />
                   22393 Hamburg
                 </p>
+                <p className="text-muted-foreground mt-4">
+                  {language === 'de' ? 'Registergericht' : 'Court of Registration'}: Amtsgericht Hamburg<br />
+                  {language === 'de' ? 'Vereinsregisternummer' : 'Registration Number'}: VR 25331
+                </p>
               </div>
 
               {/* Right Column - Board & Contact */}
