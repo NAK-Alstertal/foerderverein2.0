@@ -4,6 +4,7 @@ import { HeroBanner } from '@/components/HeroBanner';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Mail, MapPin } from 'lucide-react';
+import gemeindeAussen from '@/assets/gemeinde-aussen.jpg';
 
 export default function Contact() {
   const { t } = useLanguage();
@@ -55,9 +56,9 @@ export default function Contact() {
               <Card className="group animate-fade-up animation-delay-100 overflow-hidden">
                 <div className="relative h-40 overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&h=250&fit=crop" 
+                    src={gemeindeAussen}
                     alt={t('contact.address.title')}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover object-right transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
                   <div className="absolute bottom-3 left-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-lg">
