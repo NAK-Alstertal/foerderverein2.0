@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Layout } from '@/components/layout/Layout';
 import { HeroBanner } from '@/components/HeroBanner';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Calendar } from 'lucide-react';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { Calendar, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface NewsItem {
   id: number;
@@ -80,6 +82,23 @@ const newsItems: NewsItem[] = [
 
 export default function News() {
   const { t, language } = useLanguage();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentImages, setCurrentImages] = useState<string[]>([]);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const openLightbox = (images: string[], index: number) => {
+    setCurrentImages(images);
+    setCurrentImageIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % currentImages.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + currentImages.length) % currentImages.length);
+  };
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -121,12 +140,17 @@ export default function News() {
                   {item.images.length > 0 && (
                     <div className={`grid gap-3 ${item.images.length === 1 ? 'grid-cols-1' : item.images.length === 2 ? 'grid-cols-2' : 'grid-cols-3'}`}>
                       {item.images.map((src, imgIndex) => (
-                        <img
+                        <button
                           key={imgIndex}
-                          src={src}
-                          alt={`${language === 'de' ? item.titleDe : item.titleEn} - Bild ${imgIndex + 1}`}
-                          className="w-full h-32 md:h-40 object-cover rounded-lg"
-                        />
+                          onClick={() => openLightbox(item.images, imgIndex)}
+                          className="overflow-hidden rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                        >
+                          <img
+                            src={src}
+                            alt={`${language === 'de' ? item.titleDe : item.titleEn} - Bild ${imgIndex + 1}`}
+                            className="w-full h-32 md:h-40 object-cover transition-transform duration-300 hover:scale-105"
+                          />
+                        </button>
                       ))}
                     </div>
                   )}
@@ -136,6 +160,50 @@ export default function News() {
           </div>
         </div>
       </section>
+
+      {/* Lightbox */}
+      <Dialog open={lightboxOpen} onOpenChange={setLightboxOpen}>
+        <DialogContent className="max-w-4xl p-0 overflow-hidden bg-black/95 border-none">
+          <div className="relative">
+            <img
+              src={currentImages[currentImageIndex]?.replace('w=600', 'w=1200')}
+              alt={`Bild ${currentImageIndex + 1}`}
+              className="w-full h-auto max-h-[80vh] object-contain"
+            />
+            
+            {/* Close Button */}
+            <button
+              onClick={() => setLightboxOpen(false)}
+              className="absolute top-4 right-4 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+            >
+              <X className="h-5 w-5" />
+            </button>
+
+            {/* Navigation Buttons */}
+            {currentImages.length > 1 && (
+              <>
+                <button
+                  onClick={prevImage}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+                >
+                  <ChevronLeft className="h-6 w-6" />
+                </button>
+                <button
+                  onClick={nextImage}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+                >
+                  <ChevronRight className="h-6 w-6" />
+                </button>
+
+                {/* Image Counter */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-black/50 text-white text-sm">
+                  {currentImageIndex + 1} / {currentImages.length}
+                </div>
+              </>
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
     </Layout>
   );
 }
