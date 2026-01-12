@@ -60,7 +60,7 @@ export default function Membership() {
                   <CardDescription className="text-base">
                     {t('membership.sepa.text')}
                   </CardDescription>
-                  <Button variant="outline" asChild>
+                  <Button className="bg-orange-500 hover:bg-orange-600 text-white" asChild>
                     <a 
                       href="/documents/sepa-lastschriftmandat.pdf" 
                       target="_blank" 
@@ -82,7 +82,7 @@ export default function Membership() {
                   <CardDescription className="text-base">
                     PDF-Formular zum Ausfüllen und Einsenden
                   </CardDescription>
-                  <Button asChild>
+                  <Button className="bg-orange-500 hover:bg-orange-600 text-white" asChild>
                     <a 
                       href="/documents/mitgliedsantrag.pdf" 
                       target="_blank" 
