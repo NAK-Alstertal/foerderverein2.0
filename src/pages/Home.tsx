@@ -76,7 +76,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="pt-8 pb-16 md:pt-12 md:pb-24">
+      <section className="pt-8 pb-8 md:pt-12 md:pb-12">
         <div className="container">
           <div className="grid gap-6 md:grid-cols-3 max-w-4xl mx-auto">
             {features.map((feature, index) => (
@@ -110,7 +110,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="pb-16">
+      <section className="pb-12">
         <div className="container">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
