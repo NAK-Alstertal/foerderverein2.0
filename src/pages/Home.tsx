@@ -78,7 +78,7 @@ export default function Home() {
       {/* Features Section */}
       <section className="pt-8 pb-16 md:pt-12 md:pb-24">
         <div className="container">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 md:grid-cols-3 max-w-4xl mx-auto">
             {features.map((feature, index) => (
               <Card 
                 key={feature.href} 
