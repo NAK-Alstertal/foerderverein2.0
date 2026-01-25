@@ -24,7 +24,10 @@ const newsItems: NewsItem[] = [
     titleEn: 'Technology Upgrade Project 2026',
     contentDe: 'Wir planen ein umfassendes Streaming-Update für unsere Gottesdienste und Veranstaltungen. Mit moderner Technik möchten wir unsere Gemeinde auch digital erreichen und Gottesdienste in hoher Qualität übertragen. Dafür sammeln wir Spenden – unterstütze uns dabei!',
     contentEn: 'We are planning a comprehensive streaming update for our services and events. With modern technology, we want to reach our congregation digitally and broadcast services in high quality. We are collecting donations for this project – support us!',
-    images: [],
+    images: [
+      'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=600&q=80',
+      'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600&q=80',
+    ],
   },
   {
     id: 2,
@@ -33,7 +36,10 @@ const newsItems: NewsItem[] = [
     titleEn: 'Organ Project – New Third Manual',
     contentDe: 'Unsere Kirche bekommt eine neue Orgel! Um das Instrument mit einem dritten Manual zu vervollständigen, sammeln wir Spenden. Ein drittes Manual erweitert die klanglichen Möglichkeiten erheblich und bereichert unsere Gottesdienste und Konzerte.',
     contentEn: 'Our church is getting a new organ! To complete the instrument with a third manual, we are collecting donations. A third manual significantly expands the tonal possibilities and enriches our services and concerts.',
-    images: [],
+    images: [
+      'https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=600&q=80',
+      'https://images.unsplash.com/photo-1519683109079-d5f539e1542f?w=600&q=80',
+    ],
   },
   {
     id: 3,
@@ -42,7 +48,11 @@ const newsItems: NewsItem[] = [
     titleEn: 'Garden Project – Play Area for Children',
     contentDe: 'Unser Kirchgarten soll eine Spielfläche für Kinder erhalten! Wir planen einen kindgerechten Bereich, in dem die Kleinen spielen und toben können, während die Eltern in Ruhe an Gemeindeveranstaltungen teilnehmen. Ein Ort der Begegnung für die ganze Familie.',
     contentEn: 'Our church garden is getting a play area for children! We are planning a child-friendly space where the little ones can play while parents attend community events. A meeting place for the whole family.',
-    images: [],
+    images: [
+      'https://images.unsplash.com/photo-1566140967404-b8b3932483f5?w=600&q=80',
+      'https://images.unsplash.com/photo-1597524364372-6e51e4c10894?w=600&q=80',
+      'https://images.unsplash.com/photo-1595501783498-53a6b4408e20?w=600&q=80',
+    ],
   },
   {
     id: 4,
@@ -51,7 +61,10 @@ const newsItems: NewsItem[] = [
     titleEn: 'Cabin Project – Space for Youth',
     contentDe: 'Wir bauen die Hütte in unserem Garten zu einem Treffpunkt für Jugendliche aus. Hier sollen junge Menschen einen eigenen Raum bekommen, um sich zu treffen, kreativ zu sein und Gemeinschaft zu erleben. Ein wichtiges Projekt für die Zukunft unserer Gemeinde.',
     contentEn: 'We are converting the cabin in our garden into a meeting place for young people. Here, young people will have their own space to meet, be creative, and experience community. An important project for the future of our congregation.',
-    images: [],
+    images: [
+      'https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=600&q=80',
+      'https://images.unsplash.com/photo-1587061949409-02df41d5e562?w=600&q=80',
+    ],
   },
   {
     id: 5,
@@ -60,7 +73,9 @@ const newsItems: NewsItem[] = [
     titleEn: 'Grant from Sparkasse Hamburg',
     contentDe: 'Wir freuen uns sehr über eine großzügige Zuwendung von 2.000 € von der Sparkasse Hamburg für unser Projekt "Hütte"! Diese Förderung bringt uns einen großen Schritt näher an die Verwirklichung unseres Jugendraums. Herzlichen Dank an die Sparkasse Hamburg!',
     contentEn: 'We are very pleased about a generous grant of €2,000 from Sparkasse Hamburg for our "Cabin" project! This funding brings us a big step closer to realizing our youth space. Many thanks to Sparkasse Hamburg!',
-    images: [],
+    images: [
+      'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80',
+    ],
   },
   {
     id: 6,
@@ -69,7 +84,10 @@ const newsItems: NewsItem[] = [
     titleEn: 'Foundation of the Association',
     contentDe: 'Im Juni 2024 wurde unser Verein offiziell gegründet! Mit großer Freude und Engagement haben sich engagierte Mitglieder zusammengefunden, um unsere Kirche und Gemeinde zu unterstützen und zu fördern. Dies markiert den Beginn unserer gemeinsamen Arbeit für den Erhalt und die Weiterentwicklung unserer Gemeinde.',
     contentEn: 'In June 2024, our association was officially founded! With great joy and commitment, dedicated members came together to support and promote our church and congregation. This marks the beginning of our joint work for the preservation and development of our community.',
-    images: [],
+    images: [
+      'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80',
+      'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600&q=80',
+    ],
   },
 ];
 
