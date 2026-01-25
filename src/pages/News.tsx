@@ -79,10 +79,10 @@ const newsItems: NewsItem[] = [
   },
   {
     id: 6,
-    date: '2024-06-15',
+    date: '2022-09-25',
     titleDe: 'Gründung des Vereins',
     titleEn: 'Foundation of the Association',
-    contentDe: 'Im Juni 2024 wurde unser Verein offiziell gegründet! Mit großer Freude und Engagement haben sich engagierte Mitglieder zusammengefunden, um unsere Kirche und Gemeinde zu unterstützen und zu fördern. Dies markiert den Beginn unserer gemeinsamen Arbeit für den Erhalt und die Weiterentwicklung unserer Gemeinde.',
+    contentDe: 'Am 25. September 2022 wurde unser Verein offiziell gegründet! Mit großer Freude und Engagement haben sich engagierte Mitglieder zusammengefunden, um unsere Kirche und Gemeinde zu unterstützen und zu fördern. Dies markiert den Beginn unserer gemeinsamen Arbeit für den Erhalt und die Weiterentwicklung unserer Gemeinde.',
     contentEn: 'In June 2024, our association was officially founded! With great joy and commitment, dedicated members came together to support and promote our church and congregation. This marks the beginning of our joint work for the preservation and development of our community.',
     images: [
       'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80',
