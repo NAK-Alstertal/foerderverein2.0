@@ -49,9 +49,9 @@ const newsItems: NewsItem[] = [
     contentDe: 'Unser Kirchgarten soll eine Spielfläche für Kinder erhalten! Wir planen einen kindgerechten Bereich, in dem die Kleinen spielen und toben können, während die Eltern in Ruhe an Gemeindeveranstaltungen teilnehmen. Ein Ort der Begegnung für die ganze Familie.',
     contentEn: 'Our church garden is getting a play area for children! We are planning a child-friendly space where the little ones can play while parents attend community events. A meeting place for the whole family.',
     images: [
-      'https://images.unsplash.com/photo-1566140967404-b8b3932483f5?w=600&q=80',
-      'https://images.unsplash.com/photo-1597524364372-6e51e4c10894?w=600&q=80',
-      'https://images.unsplash.com/photo-1595501783498-53a6b4408e20?w=600&q=80',
+      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
+      'https://images.unsplash.com/photo-1472586662442-3eec04b9dbda?w=600&q=80',
+      'https://images.unsplash.com/photo-1540479859555-17af45c78602?w=600&q=80',
     ],
   },
   {
