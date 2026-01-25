@@ -15,7 +15,7 @@ export default function Privacy() {
             {/* Intro */}
             <p className="text-lg text-muted-foreground mb-8">
               {language === 'de'
-                ? 'Der Förderverein der Neuapostolischen Kirchengemeinde Hamburg-Alstertal e.V. nimmt den Schutz Ihrer personenbezogenen Daten sehr ernst. Wir behandeln Ihre Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften, insbesondere der Datenschutz-Grundverordnung (DSGVO).'
+                ? 'Der Förderverein der Neuapostolischen Kirchengemeinde Hamburg-Alstertal e.V. nimmt den Schutz deiner personenbezogenen Daten sehr ernst. Wir behandeln deine Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften, insbesondere der Datenschutz-Grundverordnung (DSGVO).'
                 : 'The Förderverein der Neuapostolischen Kirchengemeinde Hamburg-Alstertal e.V. takes the protection of your personal data very seriously. We treat your data confidentially and in accordance with legal data protection regulations, particularly the General Data Protection Regulation (GDPR).'}
             </p>
 
@@ -46,7 +46,7 @@ export default function Privacy() {
               <div className="text-muted-foreground space-y-4">
                 <p>
                   {language === 'de'
-                    ? 'Unsere Website dient ausschließlich der Information. Sie können sie ohne Angabe personenbezogener Daten nutzen.'
+                    ? 'Unsere Website dient ausschließlich der Information. Du kannst sie ohne Angabe personenbezogener Daten nutzen.'
                     : 'Our website is for informational purposes only. You can use it without providing personal data.'}
                 </p>
                 <p>
@@ -97,7 +97,7 @@ export default function Privacy() {
               </h2>
               <p className="text-muted-foreground">
                 {language === 'de'
-                  ? 'Ihre Daten werden nicht an Dritte weitergegeben.'
+                  ? 'Deine Daten werden nicht an Dritte weitergegeben.'
                   : 'Your data will not be shared with third parties.'}
               </p>
             </div>
@@ -117,20 +117,20 @@ export default function Privacy() {
             {/* 6. Ihre Rechte */}
             <div className="mb-8">
               <h2 className="text-xl font-semibold text-foreground mb-4">
-                {language === 'de' ? '6. Ihre Rechte' : '6. Your Rights'}
+                {language === 'de' ? '6. Deine Rechte' : '6. Your Rights'}
               </h2>
               <div className="text-muted-foreground space-y-4">
-                <p>{language === 'de' ? 'Sie haben jederzeit folgende Rechte:' : 'You have the following rights at any time:'}</p>
+                <p>{language === 'de' ? 'Du hast jederzeit folgende Rechte:' : 'You have the following rights at any time:'}</p>
                 <ul className="list-disc list-inside space-y-1 ml-4">
-                  <li>{language === 'de' ? 'Auskunft über Ihre gespeicherten Daten' : 'Information about your stored data'}</li>
+                  <li>{language === 'de' ? 'Auskunft über deine gespeicherten Daten' : 'Information about your stored data'}</li>
                   <li>{language === 'de' ? 'Berichtigung unrichtiger Daten' : 'Correction of inaccurate data'}</li>
-                  <li>{language === 'de' ? 'Löschung Ihrer Daten' : 'Deletion of your data'}</li>
+                  <li>{language === 'de' ? 'Löschung deiner Daten' : 'Deletion of your data'}</li>
                   <li>{language === 'de' ? 'Einschränkung der Verarbeitung' : 'Restriction of processing'}</li>
                   <li>{language === 'de' ? 'Widerspruch gegen die Verarbeitung' : 'Objection to processing'}</li>
                 </ul>
                 <p>
                   {language === 'de'
-                    ? 'Außerdem haben Sie das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.'
+                    ? 'Außerdem hast du das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.'
                     : 'You also have the right to lodge a complaint with a data protection supervisory authority.'}
                 </p>
               </div>
@@ -143,7 +143,7 @@ export default function Privacy() {
               </h2>
               <p className="text-muted-foreground">
                 {language === 'de'
-                  ? 'Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte an:'
+                  ? 'Wenn du Fragen zum Datenschutz hast, schreib uns bitte an:'
                   : 'If you have questions about data protection, please contact us at:'}
                 {' '}
                 <a href="mailto:verein@nak-alstertal.de" className="hover:text-primary transition-colors">

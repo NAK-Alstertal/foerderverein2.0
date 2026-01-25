@@ -13,7 +13,7 @@ export default function Home() {
     {
       icon: Users,
       title: t('nav.about'),
-      description: 'Erfahren Sie mehr über unseren Verein und unsere Ziele.',
+      description: 'Erfahre mehr über unseren Verein und unsere Ziele.',
       descriptionEn: 'Learn more about our association and our goals.',
       href: '/about',
       image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&h=250&fit=crop',
@@ -21,7 +21,7 @@ export default function Home() {
     {
       icon: Heart,
       title: t('nav.donate'),
-      description: 'Unterstützen Sie unsere Arbeit mit einer Spende.',
+      description: 'Unterstütze unsere Arbeit mit einer Spende.',
       descriptionEn: 'Support our work with a donation.',
       href: '/donate',
       image: 'https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400&h=250&fit=crop',
@@ -126,10 +126,10 @@ export default function Home() {
         <div className="container">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-              Werden Sie Teil unserer Gemeinschaft
+              Werde Teil unserer Gemeinschaft
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Als Mitglied oder Spender unterstützen Sie unsere gemeinnützige Arbeit und helfen uns, Gutes zu tun.
+              Als Mitglied oder Spender unterstützt du unsere gemeinnützige Arbeit und hilfst uns, Gutes zu tun.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="accent">
