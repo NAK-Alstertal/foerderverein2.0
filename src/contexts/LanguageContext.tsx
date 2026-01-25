@@ -55,17 +55,17 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Donate
     'donate.title': 'Spenden',
-    'donate.intro': 'Mit Ihrer Spende unterstützen Sie unsere gemeinnützige Arbeit.',
+    'donate.intro': 'Mit deiner Spende unterstützt du unsere gemeinnützige Arbeit.',
     'donate.bank.title': 'Bankverbindung',
     'donate.bank.name': 'Förderverein NAK Alstertal e.V.',
     'donate.bank.iban': 'IBAN: DE35 2005 0550 1504 8483 81',
     'donate.bank.bic': 'BIC: HASPDEHHXXX',
-    'donate.bank.reference': 'Verwendungszweck: Spende - << Ihr Name >>',
+    'donate.bank.reference': 'Verwendungszweck: Spende - << Dein Name >>',
     'donate.paypal.title': 'Online spenden',
     'donate.paypal.text': 'Schnell und einfach über PayPal spenden:',
     'donate.paypal.button': 'Mit PayPal spenden',
     'donate.receipt.title': 'Spendenquittung',
-    'donate.receipt.text': 'Als gemeinnütziger Verein stellen wir Ihnen gerne eine Spendenquittung für Ihre Steuererklärung aus.',
+    'donate.receipt.text': 'Als gemeinnütziger Verein stellen wir dir gerne eine Spendenquittung für deine Steuererklärung aus.',
 
     // News
     'news.title': 'Aktuelles',
@@ -77,7 +77,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Contact
     'contact.title': 'Kontakt',
-    'contact.intro': 'Haben Sie Fragen? Wir freuen uns auf Ihre Nachricht!',
+    'contact.intro': 'Hast du Fragen? Wir freuen uns auf deine Nachricht!',
     'contact.email.button': 'E-Mail schreiben',
     'contact.address.title': 'Anschrift',
 
