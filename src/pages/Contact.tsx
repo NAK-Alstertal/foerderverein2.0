@@ -41,7 +41,7 @@ export default function Contact() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-base mb-4">
-                    Schreiben Sie uns eine E-Mail und wir melden uns schnellstmöglich bei Ihnen.
+                    Schreib uns eine E-Mail und wir melden uns schnellstmöglich bei dir.
                   </CardDescription>
                   <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white" asChild>
                     <a href={`mailto:${emailAddress}`}>
