@@ -90,7 +90,7 @@ export default function Membership() {
                   </CardDescription>
                   <Button className="bg-orange-500 hover:bg-orange-600 text-white" asChild>
                     <a 
-                      href="/documents/mitgliedsantrag.pdf?v=2025-01" 
+                      href="/documents/mitgliedsantrag-2026-01-25.pdf" 
                       target="_blank" 
                       rel="noopener noreferrer"
                     >
