@@ -62,7 +62,7 @@ export default function Home() {
         <div className="container relative">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="animate-fade-up text-4xl font-bold tracking-tight text-white drop-shadow-lg md:text-5xl lg:text-6xl">
-              {t('hero.title')}
+              Förderverein NAK Alstertal e.V.
             </h1>
             <p className="animate-fade-up animation-delay-200 mt-6 text-lg text-white/95 drop-shadow md:text-xl">
               {t('hero.subtitle')}
