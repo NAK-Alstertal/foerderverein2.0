@@ -18,6 +18,15 @@ interface NewsItem {
 
 const newsItems: NewsItem[] = [
   {
+    id: 7,
+    date: '2026-02-02',
+    titleDe: 'Ausblick auf 2026',
+    titleEn: 'Outlook for 2026',
+    contentDe: '2025 haben wir genutzt, um die Grundlagen für die Arbeit unseres Vereins weiter auf- und auszubauen. Der neue Vorstand hat Prozesse und Strukturen hinterfragt und angepasst, Ziele ausgearbeitet und erste Projekte angeschoben. Mit Beginn des Jahres 2026 soll unsere Arbeit nun auch vor den Kulissen sichtbarer werden.\n\nIm Fokus stehen dabei vor allem drei größere Projekte. Wir unterstützen die Beschaffung einer neuen Orgel für unsere Kirche und machen dank Spenden und Mitgliedsbeiträgen möglich, dass diese mit einem zusätzlichen dritten Manual beschafft werden kann. Mit den beiden anderen Projekten investieren wir in die Zukunft unserer Gemeinde – im Kirchengarten entsteht eine „Jugendhütte" und der Garten selbst soll nach toller Vorarbeit im vergangenen Jahre in Teilen neugestaltet werden. Dabei liegt der Fokus einerseits auf der Nutzbarkeit für die ganze Gemeinde, andererseits aber vor allem auch darauf, unseren schönen Garten kind- und familiengerechter zu gestalten.\n\nÜber alle Projekte informieren wir beizeiten natürlich ausführlich. Wie immer gilt – aktive und finanzielle Beteiligung sind herzlich willkommen, sprecht den Vorstand gerne an!',
+    contentEn: 'In 2025, we worked on further building and expanding the foundations for our association\'s work. The new board has questioned and adapted processes and structures, developed goals, and initiated first projects. With the beginning of 2026, our work should now become more visible.\n\nThe focus is primarily on three major projects. We are supporting the acquisition of a new organ for our church and, thanks to donations and membership fees, making it possible to acquire one with an additional third manual. With the other two projects, we are investing in the future of our congregation – a "youth cabin" is being built in the church garden, and the garden itself is to be partially redesigned after great preparatory work last year. The focus is on usability for the entire congregation, but especially on making our beautiful garden more child and family-friendly.\n\nWe will of course provide detailed information about all projects in due time. As always – active and financial participation are warmly welcome, feel free to contact the board!',
+    images: [],
+  },
+  {
     id: 1,
     date: '2025-10-01',
     titleDe: 'Projekt Technikumbau 2025',
