@@ -29,8 +29,8 @@ export default function Home() {
     {
       icon: Calendar,
       title: t('nav.news'),
-      description: 'Aktuelle Neuigkeiten und Veranstaltungen.',
-      descriptionEn: 'Current news and events.',
+      description: 'Neues und Aktuelles aus unserem Verein.',
+      descriptionEn: 'Updates and news from our association.',
       href: '/news',
       image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400&h=250&fit=crop',
     },
