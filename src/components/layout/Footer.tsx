@@ -83,7 +83,7 @@ export function Footer() {
               <p className="text-sm text-muted-foreground flex items-center gap-1">
                 Made with <Heart className="h-4 w-4 text-accent fill-accent" /> in Hamburg
               </p>
-              <span className="text-xs text-muted-foreground/60">
+              <span className="text-sm text-muted-foreground">
                 v{import.meta.env.PACKAGE_VERSION}
               </span>
             </div>
