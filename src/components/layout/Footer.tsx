@@ -79,9 +79,14 @@ export function Footer() {
             <p className="text-sm text-muted-foreground">
               © {currentYear} Förderverein NAK Alstertal e.V. {t('footer.rights')}
             </p>
-            <p className="text-sm text-muted-foreground flex items-center gap-1">
-              Made with <Heart className="h-4 w-4 text-accent fill-accent" /> in Hamburg
-            </p>
+            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+              <p className="text-sm text-muted-foreground flex items-center gap-1">
+                Made with <Heart className="h-4 w-4 text-accent fill-accent" /> in Hamburg
+              </p>
+              <span className="text-xs text-muted-foreground/60">
+                v{import.meta.env.PACKAGE_VERSION}
+              </span>
+            </div>
           </div>
         </div>
       </div>
