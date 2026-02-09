@@ -27,7 +27,7 @@ export function Footer() {
             <div className="flex items-center gap-3">
               <img 
                 src={logo} 
-                alt="Förderverein NAK Alstertal Logo" 
+                alt="Förderverein der Neuapostolischen Kirchengemeinde Hamburg-Alstertal e.V. Logo" 
                 className="h-11 w-11 rounded-lg"
               />
               <span className="font-semibold text-foreground">
@@ -77,7 +77,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
-              © {currentYear} Förderverein NAK Alstertal e.V. {t('footer.rights')}
+              © {currentYear} Förderverein der Neuapostolischen Kirchengemeinde Hamburg-Alstertal e.V. {t('footer.rights')}
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
               <p className="text-sm text-muted-foreground flex items-center gap-1">

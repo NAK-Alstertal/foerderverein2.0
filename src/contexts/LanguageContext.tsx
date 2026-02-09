@@ -22,7 +22,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.privacy': 'Datenschutz',
 
     // Hero
-    'hero.title': 'Förderverein NAK Alstertal',
+    'hero.title': 'Förderverein der Neuapostolischen Kirchengemeinde Hamburg-Alstertal e.V.',
     'hero.subtitle': 'Gemeinsam Gutes tun – für unsere Gemeinde und darüber hinaus.',
     'hero.cta.membership': 'Mitglied werden',
     'hero.cta.donate': 'Jetzt spenden',
@@ -57,7 +57,7 @@ const translations: Record<Language, Record<string, string>> = {
     'donate.title': 'Spenden',
     'donate.intro': 'Mit deiner Spende unterstützt du unsere gemeinnützige Arbeit.',
     'donate.bank.title': 'Bankverbindung',
-    'donate.bank.name': 'Förderverein NAK Alstertal e.V.',
+    'donate.bank.name': 'Förderverein der Neuapostolischen Kirchengemeinde Hamburg-Alstertal e.V.',
     'donate.bank.iban': 'IBAN: DE35 2005 0550 1504 8483 81',
     'donate.bank.bic': 'BIC: HASPDEHHXXX',
     'donate.bank.reference': 'Verwendungszweck: Spende - << Dein Name >>',
@@ -102,7 +102,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.privacy': 'Privacy Policy',
 
     // Hero
-    'hero.title': 'Förderverein NAK Alstertal',
+    'hero.title': 'Förderverein der Neuapostolischen Kirchengemeinde Hamburg-Alstertal e.V.',
     'hero.subtitle': 'Doing good together – for our community and beyond.',
     'hero.cta.membership': 'Become a Member',
     'hero.cta.donate': 'Donate Now',
@@ -136,7 +136,7 @@ const translations: Record<Language, Record<string, string>> = {
     'donate.title': 'Donate',
     'donate.intro': 'Your donation supports our charitable work.',
     'donate.bank.title': 'Bank Details',
-    'donate.bank.name': 'Förderverein NAK Alstertal e.V.',
+    'donate.bank.name': 'Förderverein der Neuapostolischen Kirchengemeinde Hamburg-Alstertal e.V.',
     'donate.bank.iban': 'IBAN: DE35 2005 0550 1504 8483 81',
     'donate.bank.bic': 'BIC: HASPDEHHXXX',
     'donate.bank.reference': 'Reference: Donation - << Your Name >>',
