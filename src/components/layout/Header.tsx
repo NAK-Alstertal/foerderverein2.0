@@ -31,7 +31,7 @@ export function Header() {
         <Link to="/" className="flex items-center">
           <img 
             src={logo} 
-            alt="Förderverein NAK Alstertal Logo" 
+            alt="Förderverein der Neuapostolischen Kirchengemeinde Hamburg-Alstertal e.V. Logo" 
             className="h-11 w-11 rounded-lg transition-transform duration-200 hover:scale-110"
           />
         </Link>

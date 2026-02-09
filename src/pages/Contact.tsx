@@ -70,7 +70,7 @@ export default function Contact() {
                 </CardHeader>
                 <CardContent>
                   <address className="not-italic text-muted-foreground space-y-1">
-                    <p className="font-semibold text-foreground">Förderverein NAK Alstertal e.V.</p>
+                    <p className="font-semibold text-foreground">Förderverein der Neuapostolischen Kirchengemeinde Hamburg-Alstertal e.V.</p>
                     <p>Dweerblöcken 8</p>
                     <p>22393 Hamburg</p>
                     <p>Deutschland</p>
