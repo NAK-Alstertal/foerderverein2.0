@@ -80,6 +80,14 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.intro': 'Hast du Fragen? Wir freuen uns auf deine Nachricht!',
     'contact.email.button': 'E-Mail schreiben',
     'contact.address.title': 'Anschrift',
+    'contact.form.title': 'Nachricht senden',
+    'contact.form.name': 'Name',
+    'contact.form.email': 'E-Mail-Adresse',
+    'contact.form.message': 'Nachricht',
+    'contact.form.submit': 'Nachricht senden',
+    'contact.form.sending': 'Wird gesendet…',
+    'contact.form.success': 'Vielen Dank! Wir melden uns bald bei dir.',
+    'contact.form.error': 'Etwas ist schiefgelaufen. Bitte versuch es später nochmal.',
 
     // Footer
     'footer.rights': 'Alle Rechte vorbehalten.',
@@ -159,6 +167,14 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.intro': 'Have questions? We look forward to hearing from you!',
     'contact.email.button': 'Send Email',
     'contact.address.title': 'Address',
+    'contact.form.title': 'Send a Message',
+    'contact.form.name': 'Name',
+    'contact.form.email': 'Email Address',
+    'contact.form.message': 'Message',
+    'contact.form.submit': 'Send Message',
+    'contact.form.sending': 'Sending…',
+    'contact.form.success': 'Thank you! We will get back to you soon.',
+    'contact.form.error': 'Something went wrong. Please try again later.',
 
     // Footer
     'footer.rights': 'All rights reserved.',
