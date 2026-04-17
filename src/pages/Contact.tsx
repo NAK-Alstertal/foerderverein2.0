@@ -9,7 +9,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import gemeindeAussen from '@/assets/gemeinde-aussen.jpg';
 
-const CONTACT_ENDPOINT = 'https://verein.nak-alstertal.de/contact';
+const CONTACT_ENDPOINT = 'https://verein.nak-alstertal.de/contact/';
 
 export default function Contact() {
   const { t } = useLanguage();
