@@ -43,8 +43,7 @@ export default function Imprint() {
                   </h2>
                   <p className="text-muted-foreground">
                     Anja Link<br />
-                    Prof. Dr. Christoph Großmann<br />
-                    Lars Kocherscheid-Dahm
+                    Prof. Dr. Christoph Großmann
                   </p>
                 </div>
 
