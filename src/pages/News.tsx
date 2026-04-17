@@ -28,18 +28,6 @@ const newsItems: NewsItem[] = [
     images: [ausblick2026Image],
   },
   {
-    id: 1,
-    date: '2025-10-01',
-    titleDe: 'Projekt Technikumbau 2025',
-    titleEn: 'Technology Upgrade Project 2025',
-    contentDe: 'Nach 5 Jahren im Einsatz planen wir ein umfassendes Streaming-Update für unsere Gottesdienste und Veranstaltungen. Mit moderner Technik möchten wir unsere Gemeinde auch in den nächsten Jahren digital erreichen und Gottesdienste in hoher Qualität übertragen. Dafür sammeln wir Spenden – unterstütze uns dabei!',
-    contentEn: 'After 5 years of service, we are planning a comprehensive streaming update for our services and events. With modern technology, we want to continue reaching our congregation digitally and broadcast services in high quality. We are collecting donations for this project – support us!',
-    images: [
-      'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=600&q=80',
-      'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600&q=80',
-    ],
-  },
-  {
     id: 2,
     date: '2025-11-20',
     titleDe: 'Projekt Orgel – Neues drittes Manual',
