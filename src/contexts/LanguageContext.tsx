@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-type Language = 'de' | 'en';
+type Language = 'de' | 'en' | 'fr';
 
 interface LanguageContextType {
   language: Language;
@@ -183,6 +183,94 @@ const translations: Record<Language, Record<string, string>> = {
     // Common
     'common.learnMore': 'Learn More',
     'common.back': 'Back',
+  },
+  fr: {
+    // Navigation
+    'nav.home': 'Accueil',
+    'nav.about': 'À propos',
+    'nav.membership': 'Adhérer',
+    'nav.donate': 'Faire un don',
+    'nav.news': 'Actualités',
+    'nav.gallery': 'Galerie',
+    'nav.contact': 'Contact',
+    'nav.imprint': 'Mentions légales',
+    'nav.privacy': 'Confidentialité',
+
+    // Hero
+    'hero.title': 'Förderverein NAK Alstertal',
+    'hero.subtitle': 'Agir ensemble – pour notre communauté et au-delà.',
+    'hero.cta.membership': 'Devenir membre',
+    'hero.cta.donate': 'Faire un don',
+
+    // About
+    'about.title': 'Notre association',
+    'about.purpose.title': 'Notre mission',
+    'about.purpose.text': "L'association a pour but le soutien idéel et financier des objectifs ecclésiastiques et caritatifs de la congrégation néo-apostolique Hamburg-Alstertal.",
+    'about.goals.title': 'Nos objectifs',
+    'about.goals.text': "L'association collecte des dons pour soutenir financièrement les projets correspondant à ces objectifs. En étroite collaboration avec la congrégation, des mesures sont prises pour renforcer la communauté.",
+    'about.subtitle': 'Nous soutenons la vie ecclésiale et la communauté sociale de façon durable.',
+    'about.statute.title': 'Statuts',
+    'about.statute.text': 'Téléchargez nos statuts complets.',
+    'about.statute.download': 'Télécharger les statuts (PDF)',
+
+    // Membership
+    'membership.title': 'Adhérer',
+    'membership.subtitle': 'Nous invitons toute personne partageant nos valeurs à rejoindre notre association.',
+    'membership.intro': "En tant que membre, vous soutenez activement les objectifs de nos statuts. Toute personne physique ou morale partageant nos buts peut devenir membre.",
+    'membership.benefits.title': 'Avantages',
+    'membership.benefits.1': "Participation active aux activités de l'association",
+    'membership.benefits.2': 'Invitations à des événements exclusifs',
+    'membership.benefits.3': 'Informations régulières sur les projets',
+    'membership.benefits.4': 'Cotisations déductibles des impôts',
+    'membership.fee.title': 'Cotisation annuelle',
+    'membership.fee.text': 'La cotisation minimale est de 24 € par an (ou 2 € par mois).',
+    'membership.sepa.title': 'Paiement par prélèvement SEPA',
+    'membership.sepa.text': 'La cotisation est prélevée annuellement par prélèvement SEPA.',
+    'membership.form.download': "Télécharger le formulaire d'adhésion (PDF)",
+
+    // Donate
+    'donate.title': 'Faire un don',
+    'donate.intro': 'Votre don soutient notre travail caritatif.',
+    'donate.bank.title': 'Coordonnées bancaires',
+    'donate.bank.name': 'Förderverein NAK Alstertal e.V.',
+    'donate.bank.iban': 'IBAN : DE35 2005 0550 1504 8483 81',
+    'donate.bank.bic': 'BIC : HASPDEHHXXX',
+    'donate.bank.reference': 'Référence : Don - << Votre nom >>',
+    'donate.paypal.title': 'Don en ligne',
+    'donate.paypal.text': 'Don rapide et facile via PayPal :',
+    'donate.paypal.button': 'Donner via PayPal',
+    'donate.receipt.title': 'Reçu fiscal',
+    'donate.receipt.text': "En tant qu'association reconnue d'utilité publique, nous vous délivrons volontiers un reçu fiscal.",
+
+    // News
+    'news.title': 'Actualités',
+    'news.subtitle': "Nouvelles et événements de l'association",
+
+    // Gallery
+    'gallery.title': 'Galerie photos',
+    'gallery.subtitle': "Impressions de la vie de l'association",
+
+    // Contact
+    'contact.title': 'Contact',
+    'contact.intro': 'Des questions ? Nous sommes à votre écoute !',
+    'contact.email.button': 'Envoyer un e-mail',
+    'contact.address.title': 'Adresse',
+    'contact.form.title': 'Envoyer un message',
+    'contact.form.name': 'Nom',
+    'contact.form.email': 'Adresse e-mail',
+    'contact.form.message': 'Message',
+    'contact.form.submit': 'Envoyer',
+    'contact.form.sending': 'Envoi en cours…',
+    'contact.form.success': 'Merci ! Nous vous répondrons dans les plus brefs délais.',
+    'contact.form.error': 'Une erreur est survenue. Veuillez réessayer plus tard.',
+
+    // Footer
+    'footer.rights': 'Tous droits réservés.',
+    'footer.nonprofit': 'Association à but non lucratif',
+
+    // Common
+    'common.learnMore': 'En savoir plus',
+    'common.back': 'Retour',
   },
 };
 
