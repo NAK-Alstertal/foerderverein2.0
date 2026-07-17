@@ -1,0 +1,75 @@
+---
+import HeroBanner from '../HeroBanner.astro';
+import { useTranslations, type Lang } from '../../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const icons = {
+  bank: '<line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/>',
+  card: '<rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/>',
+  receipt: '<path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M8 7h8M8 11h8M8 15h5"/>',
+  ext: '<path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>',
+};
+---
+
+<HeroBanner title={t('donate.title')} subtitle={t('donate.intro')} />
+
+<section class="pt-8 pb-16 md:pt-12 md:pb-24">
+  <div class="container">
+    <div class="grid gap-8 lg:grid-cols-2">
+      <!-- Bankverbindung -->
+      <div class="group rounded-lg border border-border bg-card text-card-foreground shadow-sm overflow-hidden animate-fade-up">
+        <div class="relative h-40 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=250&fit=crop" alt={t('donate.bank.title')} loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
+          <div class="absolute bottom-3 left-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-lg">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={icons.bank} />
+          </div>
+        </div>
+        <div class="pt-4 pb-2 px-6"><h2 class="text-xl font-semibold">{t('donate.bank.title')}</h2></div>
+        <div class="px-6 pb-6">
+          <div class="rounded-lg bg-secondary/50 p-4 space-y-2">
+            <p class="font-semibold text-foreground">{t('donate.bank.name')}</p>
+            <p class="text-muted-foreground font-mono text-sm">{t('donate.bank.iban')}</p>
+            <p class="text-muted-foreground font-mono text-sm">{t('donate.bank.bic')}</p>
+            <p class="text-muted-foreground text-sm">{t('donate.bank.reference')}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PayPal -->
+      <div class="group rounded-lg border border-border bg-card text-card-foreground shadow-sm overflow-hidden animate-fade-up animation-delay-100">
+        <div class="relative h-40 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop" alt={t('donate.paypal.title')} loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
+          <div class="absolute bottom-3 left-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500 text-white shadow-lg">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={icons.card} />
+          </div>
+        </div>
+        <div class="pt-4 pb-2 px-6"><h2 class="text-xl font-semibold">{t('donate.paypal.title')}</h2></div>
+        <div class="px-6 pb-6 space-y-4">
+          <p class="text-base text-muted-foreground">{t('donate.paypal.text')}</p>
+          <a href="https://paypal.me/nakalstertal" target="_blank" rel="noopener noreferrer" class="inline-flex w-full items-center justify-center gap-2 rounded-md bg-orange-500 px-6 py-3 text-sm font-medium text-white transition hover:bg-orange-600">
+            {t('donate.paypal.button')}
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={icons.ext} />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Spendenquittung -->
+    <div class="group mt-8 rounded-lg border border-border bg-card text-card-foreground shadow-sm overflow-hidden animate-fade-up animation-delay-200">
+      <div class="relative h-40 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800&h=250&fit=crop" alt={t('donate.receipt.title')} loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
+        <div class="absolute bottom-3 left-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-lg">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={icons.receipt} />
+        </div>
+      </div>
+      <div class="pt-4 pb-2 px-6"><h2 class="text-xl font-semibold">{t('donate.receipt.title')}</h2></div>
+      <div class="px-6 pb-6"><p class="text-base text-muted-foreground">{t('donate.receipt.text')}</p></div>
+    </div>
+  </div>
+</section>

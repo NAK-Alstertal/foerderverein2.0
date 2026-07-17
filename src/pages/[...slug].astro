@@ -1,12 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import HomeContent from '../components/pages/HomeContent.astro';
+import AboutContent from '../components/pages/AboutContent.astro';
+import MembershipContent from '../components/pages/MembershipContent.astro';
+import DonateContent from '../components/pages/DonateContent.astro';
+import NewsContent from '../components/pages/NewsContent.astro';
 import ContactContent from '../components/pages/ContactContent.astro';
+import ImprintContent from '../components/pages/ImprintContent.astro';
+import PrivacyContent from '../components/pages/PrivacyContent.astro';
 import { languages, defaultLang, useTranslations, type Lang, type UIKey } from '../i18n/ui';
 
 const COMPONENTS: Record<string, any> = {
   home: HomeContent,
+  about: AboutContent,
+  membership: MembershipContent,
+  donate: DonateContent,
+  news: NewsContent,
   contact: ContactContent,
+  imprint: ImprintContent,
+  privacy: PrivacyContent,
 };
 
 export function getStaticPaths() {
@@ -14,7 +26,13 @@ export function getStaticPaths() {
   // (Muss INNERHALB von getStaticPaths stehen — isolierter Scope.)
   const PAGES = [
     { id: 'home', path: '', titleKey: null, descKey: 'hero.subtitle' },
+    { id: 'about', path: 'about', titleKey: 'about.title', descKey: 'about.subtitle' },
+    { id: 'membership', path: 'membership', titleKey: 'membership.title', descKey: 'membership.subtitle' },
+    { id: 'donate', path: 'donate', titleKey: 'donate.title', descKey: 'donate.intro' },
+    { id: 'news', path: 'news', titleKey: 'news.title', descKey: 'news.subtitle' },
     { id: 'contact', path: 'contact', titleKey: 'contact.title', descKey: 'contact.intro' },
+    { id: 'imprint', path: 'imprint', titleKey: 'nav.imprint', descKey: 'nav.imprint' },
+    { id: 'privacy', path: 'privacy', titleKey: 'nav.privacy', descKey: 'nav.privacy' },
   ] as const;
 
   const langs = Object.keys(languages) as Lang[];

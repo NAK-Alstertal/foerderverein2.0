@@ -1,0 +1,70 @@
+---
+import { Image } from 'astro:assets';
+import HeroBanner from '../HeroBanner.astro';
+import glaubeLiebe from '../../assets/glaube-liebe.png';
+import { useTranslations, type Lang } from '../../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const icons = {
+  target: '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>',
+  users: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+  file: '<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h5"/>',
+  download: '<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/>',
+};
+---
+
+<HeroBanner title={t('about.title')} subtitle={t('about.subtitle')} />
+
+<section class="pt-8 pb-16 md:pt-12 md:pb-24">
+  <div class="container">
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Zweck -->
+      <div class="group rounded-lg border border-border bg-card text-card-foreground shadow-sm overflow-hidden animate-fade-up">
+        <div class="relative h-40 overflow-hidden">
+          <Image src={glaubeLiebe} alt={t('about.purpose.title')} widths={[400, 800]} sizes="(max-width: 1024px) 100vw, 400px" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
+          <div class="absolute bottom-3 left-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-lg">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={icons.target} />
+          </div>
+        </div>
+        <div class="pt-4 pb-2 px-6"><h2 class="text-xl font-semibold">{t('about.purpose.title')}</h2></div>
+        <div class="px-6 pb-6"><p class="text-base text-muted-foreground">{t('about.purpose.text')}</p></div>
+      </div>
+
+      <!-- Ziele -->
+      <div class="group rounded-lg border border-border bg-card text-card-foreground shadow-sm overflow-hidden animate-fade-up animation-delay-100">
+        <div class="relative h-40 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&h=250&fit=crop" alt={t('about.goals.title')} loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
+          <div class="absolute bottom-3 left-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-lg">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={icons.users} />
+          </div>
+        </div>
+        <div class="pt-4 pb-2 px-6"><h2 class="text-xl font-semibold">{t('about.goals.title')}</h2></div>
+        <div class="px-6 pb-6"><p class="text-base text-muted-foreground">{t('about.goals.text')}</p></div>
+      </div>
+
+      <!-- Satzung -->
+      <div class="group rounded-lg border border-border bg-card text-card-foreground shadow-sm overflow-hidden animate-fade-up animation-delay-200">
+        <div class="relative h-40 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=250&fit=crop" alt={t('about.statute.title')} loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
+          <div class="absolute bottom-3 left-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-lg">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={icons.file} />
+          </div>
+        </div>
+        <div class="pt-4 pb-2 px-6"><h2 class="text-xl font-semibold">{t('about.statute.title')}</h2></div>
+        <div class="px-6 pb-6 space-y-4">
+          <p class="text-base text-muted-foreground">{t('about.statute.text')}</p>
+          <a href="/documents/satzung-de.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-md bg-orange-500 px-4 py-2 text-sm font-medium text-white transition hover:bg-orange-600">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={icons.download} />
+            {t('about.statute.download')}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,79 @@
+---
+import HeroBanner from '../HeroBanner.astro';
+import { type Lang } from '../../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const de = lang === 'de';
+
+const title = de ? 'Datenschutzerklärung' : 'Privacy Policy';
+const intro = de
+  ? 'Der Förderverein der Neuapostolischen Kirchengemeinde Hamburg-Alstertal e.V. nimmt den Schutz deiner personenbezogenen Daten sehr ernst. Wir behandeln deine Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften, insbesondere der Datenschutz-Grundverordnung (DSGVO).'
+  : 'The Förderverein der Neuapostolischen Kirchengemeinde Hamburg-Alstertal e.V. takes the protection of your personal data very seriously. We treat your data confidentially and in accordance with legal data protection regulations, particularly the General Data Protection Regulation (GDPR).';
+
+const emailHtml = 'verein@nak-alstertal.de';
+
+const sections = de
+  ? [
+      { h: '1. Verantwortlicher', addr: true },
+      { h: '2. Datenverarbeitung beim Besuch der Website', p: [
+        'Unsere Website dient ausschließlich der Information. Du kannst sie ohne Angabe personenbezogener Daten nutzen.',
+        'Beim Aufruf der Website werden durch den Webserver automatisch folgende Daten verarbeitet:',
+      ], ul: ['IP-Adresse', 'Datum und Uhrzeit des Zugriffs', 'aufgerufene Seite', 'Browsertyp und Betriebssystem'], p2: [
+        'Diese Daten werden in sogenannten Server-Logfiles gespeichert. Sie dienen ausschließlich dem technischen Betrieb, der Sicherheit und der Fehleranalyse der Website.',
+        'Eine Zusammenführung dieser Daten mit anderen Datenquellen oder eine Auswertung zu Marketingzwecken findet nicht statt.',
+        'Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem sicheren und funktionsfähigen Internetauftritt).',
+      ] },
+      { h: '3. Cookies', p: ['Unsere Website verwendet keine Cookies, die personenbezogene Daten speichern oder Nutzer verfolgen.'] },
+      { h: '4. Weitergabe von Daten', p: ['Deine Daten werden nicht an Dritte weitergegeben.'] },
+      { h: '5. Speicherdauer', p: ['Server-Logfiles werden nur so lange gespeichert, wie dies aus technischen oder sicherheitsrelevanten Gründen erforderlich ist, und anschließend gelöscht.'] },
+      { h: '6. Deine Rechte', p: ['Du hast jederzeit folgende Rechte:'], ul: ['Auskunft über deine gespeicherten Daten', 'Berichtigung unrichtiger Daten', 'Löschung deiner Daten', 'Einschränkung der Verarbeitung', 'Widerspruch gegen die Verarbeitung'], p2: ['Außerdem hast du das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.'] },
+      { h: '7. Kontakt', contact: 'Wenn du Fragen zum Datenschutz hast, schreib uns bitte an:' },
+    ]
+  : [
+      { h: '1. Responsible Party', addr: true },
+      { h: '2. Data Processing When Visiting the Website', p: [
+        'Our website is for informational purposes only. You can use it without providing personal data.',
+        'When accessing the website, the web server automatically processes the following data:',
+      ], ul: ['IP address', 'Date and time of access', 'accessed page', 'Browser type and operating system'], p2: [
+        'This data is stored in so-called server log files. They are used exclusively for technical operation, security, and error analysis of the website.',
+        'This data is not merged with other data sources or used for marketing purposes.',
+        'The legal basis is Art. 6 para. 1 lit. f GDPR (legitimate interest in a secure and functional website).',
+      ] },
+      { h: '3. Cookies', p: ['Our website does not use cookies that store personal data or track users.'] },
+      { h: '4. Data Sharing', p: ['Your data will not be shared with third parties.'] },
+      { h: '5. Storage Duration', p: ['Server log files are only stored for as long as necessary for technical or security reasons, and then deleted.'] },
+      { h: '6. Your Rights', p: ['You have the following rights at any time:'], ul: ['Information about your stored data', 'Correction of inaccurate data', 'Deletion of your data', 'Restriction of processing', 'Objection to processing'], p2: ['You also have the right to lodge a complaint with a data protection supervisory authority.'] },
+      { h: '7. Contact', contact: 'If you have questions about data protection, please contact us at:' },
+    ];
+---
+
+<HeroBanner title={title} compact />
+
+<section class="py-16 md:py-24">
+  <div class="container">
+    <div class="mx-auto max-w-4xl">
+      <p class="text-lg text-muted-foreground mb-8">{intro}</p>
+
+      {sections.map((sec) => (
+        <div class="mb-8">
+          <h2 class="text-xl font-semibold text-foreground mb-4">{sec.h}</h2>
+          <div class="text-muted-foreground space-y-4">
+            {sec.addr && (
+              <div class="space-y-1">
+                <p>Förderverein der Neuapostolischen Kirchengemeinde Hamburg-Alstertal e.V.</p>
+                <p>Dweerblöcken 8</p><p>22393 Hamburg</p><p>Deutschland</p>
+                <p class="mt-4">E-Mail: <a href={`mailto:${emailHtml}`} class="hover:text-primary transition-colors">{emailHtml}</a></p>
+                <p>Website: <a href="https://verein.nak-alstertal.de" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">https://verein.nak-alstertal.de</a></p>
+              </div>
+            )}
+            {sec.p?.map((p) => <p>{p}</p>)}
+            {sec.ul && <ul class="list-disc list-inside space-y-1 ml-4">{sec.ul.map((li) => <li>{li}</li>)}</ul>}
+            {sec.p2?.map((p) => <p>{p}</p>)}
+            {sec.contact && <p>{sec.contact} <a href={`mailto:${emailHtml}`} class="hover:text-primary transition-colors">{emailHtml}</a></p>}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
