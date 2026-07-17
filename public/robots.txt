@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://verein.nak-alstertal.de/sitemap-index.xml
