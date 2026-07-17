@@ -1,0 +1,105 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.png';
+import { getLangFromUrl, useTranslations, localizePath, languages, type Lang } from '../i18n/ui';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// Logischer Pfad ohne Sprach-Prefix (für Aktiv-Status + Sprachwechsel).
+const basePath = '/' + Astro.url.pathname.replace(/^\/+/, '').replace(/^(en|fr|de)(\/|$)/, '').replace(/\/$/, '');
+
+const navItems = [
+  { path: '/', key: 'nav.home' },
+  { path: '/about', key: 'nav.about' },
+  { path: '/membership', key: 'nav.membership' },
+  { path: '/donate', key: 'nav.donate' },
+  { path: '/news', key: 'nav.news' },
+  { path: '/contact', key: 'nav.contact' },
+] as const;
+
+const isActive = (p: string) => (p === '/' ? basePath === '/' : basePath === p || basePath.startsWith(p + '/'));
+
+const flags: Record<Lang, string> = {
+  de: `<svg viewBox="0 0 5 3" width="20" height="12"><rect width="5" height="1" y="0" fill="#000"/><rect width="5" height="1" y="1" fill="#D00"/><rect width="5" height="1" y="2" fill="#FFCE00"/></svg>`,
+  en: `<svg viewBox="0 0 60 30" width="20" height="10"><rect width="60" height="30" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="2"/><path d="M30,0 V30 M0,15 H60" stroke="#fff" stroke-width="10"/><path d="M30,0 V30 M0,15 H60" stroke="#C8102E" stroke-width="6"/></svg>`,
+  fr: `<svg viewBox="0 0 3 2" width="20" height="13"><rect width="1" height="2" x="0" fill="#002395"/><rect width="1" height="2" x="1" fill="#fff"/><rect width="1" height="2" x="2" fill="#ED2939"/></svg>`,
+};
+const langCodes = Object.keys(languages) as Lang[];
+---
+
+<header class="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+  <div class="container flex h-16 items-center justify-between">
+    <a href={localizePath('/', lang)} class="flex items-center">
+      <Image src={logo} alt="Förderverein NAK Alstertal Logo" width={44} height={44} class="h-11 w-11 rounded-lg transition-transform duration-200 hover:scale-110" />
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-1">
+      {navItems.map((item) => (
+        <a
+          href={localizePath(item.path, lang)}
+          class:list={[
+            'relative px-3 py-2 text-sm font-medium transition-colors hover:text-orange-600',
+            "after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:bg-orange-500 after:transition-all after:duration-300",
+            isActive(item.path) ? 'text-orange-600 after:w-2/3' : 'text-muted-foreground after:w-0 hover:after:w-2/3',
+          ]}
+        >
+          {t(item.key)}
+        </a>
+      ))}
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <!-- Sprachumschalter -->
+      <div class="relative group">
+        <button type="button" class="flex items-center gap-1.5 h-9 px-2 rounded-md hover:bg-accent/20 transition-colors" aria-haspopup="true">
+          <span set:html={flags[lang]} />
+          <span class="text-sm font-medium">{lang.toUpperCase()}</span>
+          <svg class="h-3.5 w-3.5 text-muted-foreground" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="absolute right-0 mt-1 w-[160px] rounded-md border border-border bg-popover p-1 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible focus-within:opacity-100 focus-within:visible transition">
+          {langCodes.map((code) => (
+            <a
+              href={localizePath(basePath, code)}
+              class:list={['flex items-center gap-2 w-full px-3 py-2 rounded-sm text-sm transition-colors', code === lang ? 'bg-accent/20 font-medium' : 'hover:bg-accent/10']}
+            >
+              <span set:html={flags[code]} />
+              <span>{languages[code]}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Mobile-Menü-Button -->
+      <button type="button" id="mobile-menu-toggle" class="lg:hidden inline-flex items-center justify-center h-9 w-9 rounded-md hover:bg-accent/20" aria-label="Menü" aria-expanded="false">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile-Navigation -->
+  <div id="mobile-menu" class="lg:hidden border-t border-border hidden">
+    <nav class="container py-4 flex flex-col gap-1">
+      {navItems.map((item) => (
+        <a
+          href={localizePath(item.path, lang)}
+          class:list={[
+            'px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-orange-400/20 hover:text-orange-600',
+            isActive(item.path) ? 'bg-orange-400/30 text-orange-600' : 'text-muted-foreground',
+          ]}
+        >
+          {t(item.key)}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => {
+    const open = menu?.classList.toggle('hidden') === false;
+    btn.setAttribute('aria-expanded', String(open));
+  });
+</script>

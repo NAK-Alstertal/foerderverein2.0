@@ -1,0 +1,63 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.png';
+import pkg from '../../package.json';
+import { getLangFromUrl, useTranslations, localizePath } from '../i18n/ui';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const year = new Date().getFullYear();
+
+const logoColors = ['coral', 'orange', 'yellow', 'green', 'teal', 'blue', 'purple'];
+---
+
+<footer class="border-t border-border bg-secondary/30">
+  <!-- Regenbogen-Streifen aus den Logo-Farben -->
+  <div class="flex h-1.5">
+    {logoColors.map((c) => <div class="flex-1" style={`background: hsl(var(--logo-${c}))`} />)}
+  </div>
+
+  <div class="container py-12">
+    <div class="grid gap-8 md:grid-cols-3">
+      <div class="space-y-4">
+        <div class="flex items-center gap-3">
+          <Image src={logo} alt="Förderverein NAK Alstertal Logo" width={44} height={44} class="h-11 w-11 rounded-lg" />
+          <span class="font-semibold text-foreground">
+            Förderverein der Neuapostolischen Kirchengemeinde<br />Hamburg-Alstertal e.V.
+          </span>
+        </div>
+        <p class="text-sm text-muted-foreground max-w-xs">{t('footer.nonprofit')}</p>
+      </div>
+
+      <div class="space-y-4">
+        <h3 class="font-semibold text-foreground">{t('footer.links')}</h3>
+        <nav class="flex flex-col gap-2">
+          <a href={localizePath('/about', lang)} class="text-sm text-muted-foreground hover:text-foreground transition-colors">{t('nav.about')}</a>
+          <a href={localizePath('/membership', lang)} class="text-sm text-muted-foreground hover:text-foreground transition-colors">{t('nav.membership')}</a>
+          <a href={localizePath('/donate', lang)} class="text-sm text-muted-foreground hover:text-foreground transition-colors">{t('nav.donate')}</a>
+          <a href={localizePath('/contact', lang)} class="text-sm text-muted-foreground hover:text-foreground transition-colors">{t('nav.contact')}</a>
+        </nav>
+      </div>
+
+      <div class="space-y-4">
+        <h3 class="font-semibold text-foreground">{t('footer.legal')}</h3>
+        <nav class="flex flex-col gap-2">
+          <a href={localizePath('/imprint', lang)} class="text-sm text-muted-foreground hover:text-foreground transition-colors">{t('nav.imprint')}</a>
+          <a href={localizePath('/privacy', lang)} class="text-sm text-muted-foreground hover:text-foreground transition-colors">{t('nav.privacy')}</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-border">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-muted-foreground">
+          © {year} Förderverein der Neuapostolischen Kirchengemeinde Hamburg-Alstertal e.V. {t('footer.rights')}
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+          <p class="text-sm text-muted-foreground">Made with ♥ in Hamburg</p>
+          <span class="text-sm text-muted-foreground">v{pkg.version}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

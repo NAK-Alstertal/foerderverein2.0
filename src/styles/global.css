@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* NAK Alstertal Förderverein Design System
+   Warm, friendly colors with blue and orange accent
+   All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 35% 96%;
+    --foreground: 215 50% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 50% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 50% 18%;
+
+    /* Primary: NAK Blue (from logo center) */
+    --primary: 215 55% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Light Blue */
+    --secondary: 210 50% 94%;
+    --secondary-foreground: 215 55% 40%;
+
+    --muted: 210 30% 92%;
+    --muted-foreground: 215 20% 45%;
+
+    /* Accent: Warm Orange (from logo) */
+    --accent: 30 85% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Logo Colors for decorative use */
+    --logo-blue: 215 55% 50%;
+    --logo-orange: 30 85% 55%;
+    --logo-yellow: 45 90% 60%;
+    --logo-green: 160 50% 45%;
+    --logo-teal: 170 45% 50%;
+    --logo-purple: 270 40% 55%;
+    --logo-coral: 5 70% 60%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 88%;
+    --input: 214 32% 88%;
+    --ring: 215 55% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom: Hero gradient - soft blue like the church illustration */
+    --hero-gradient-start: 210 60% 85%;
+    --hero-gradient-end: 215 55% 75%;
+  }
+
+  .dark {
+    --background: 215 45% 10%;
+    --foreground: 210 40% 98%;
+
+    --card: 215 45% 14%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 215 45% 14%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 215 55% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 215 40% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 215 35% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 30 85% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --logo-blue: 215 55% 55%;
+    --logo-orange: 30 85% 55%;
+    --logo-yellow: 45 90% 60%;
+    --logo-green: 160 50% 50%;
+    --logo-teal: 170 45% 55%;
+    --logo-purple: 270 40% 60%;
+    --logo-coral: 5 70% 60%;
+
+    --destructive: 0 63% 40%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 35% 20%;
+    --input: 215 35% 20%;
+    --ring: 215 55% 55%;
+
+    --hero-gradient-start: 215 50% 20%;
+    --hero-gradient-end: 215 45% 30%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--hero-gradient-start)) 0%,
+      hsl(var(--hero-gradient-end)) 100%
+    );
+  }
+
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-sm border border-border/50 shadow-lg;
+  }
+}
+
+/* Custom animations */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade-up { animation: fade-up 0.6s ease-out forwards; }
+.animate-fade-in { animation: fade-in 0.4s ease-out forwards; }
+.animate-slide-in-left { animation: slide-in-left 0.5s ease-out forwards; }
+.animation-delay-100 { animation-delay: 100ms; }
+.animation-delay-200 { animation-delay: 200ms; }
+.animation-delay-300 { animation-delay: 300ms; }
+.animation-delay-400 { animation-delay: 400ms; }
