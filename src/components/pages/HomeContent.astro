@@ -1,0 +1,87 @@
+---
+import HeroBanner from '../HeroBanner.astro';
+import { useTranslations, localizePath, type Lang } from '../../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const desc = {
+  de: {
+    about: 'Erfahre mehr über unseren Verein und unsere Ziele.',
+    donate: 'Unterstütze unsere Arbeit mit einer Spende.',
+    news: 'Neues und Aktuelles aus unserem Verein.',
+    ctaTitle: 'Werde Teil unserer Gemeinschaft',
+    ctaText: 'Als Mitglied oder Spender unterstützt du unsere gemeinnützige Arbeit und hilfst uns, Gutes zu tun.',
+  },
+  en: {
+    about: 'Learn more about our association and our goals.',
+    donate: 'Support our work with a donation.',
+    news: 'Updates and news from our association.',
+    ctaTitle: 'Become part of our community',
+    ctaText: 'As a member or donor, you support our charitable work and help us do good.',
+  },
+  fr: {
+    about: "Découvrez notre association et nos objectifs.",
+    donate: 'Soutenez notre travail par un don.',
+    news: "Nouvelles et actualités de l'association.",
+    ctaTitle: 'Rejoignez notre communauté',
+    ctaText: 'En tant que membre ou donateur, vous soutenez notre travail caritatif.',
+  },
+}[lang];
+
+const icons: Record<string, string> = {
+  users: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+  heart: '<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>',
+  calendar: '<rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/>',
+};
+
+const features = [
+  { icon: 'users', title: t('nav.about'), description: desc.about, href: '/about', image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&h=250&fit=crop' },
+  { icon: 'heart', title: t('nav.donate'), description: desc.donate, href: '/donate', image: 'https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400&h=250&fit=crop' },
+  { icon: 'calendar', title: t('nav.news'), description: desc.news, href: '/news', image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400&h=250&fit=crop' },
+];
+---
+
+<HeroBanner title={t('hero.title')} subtitle={t('hero.subtitle')} />
+
+<!-- Feature-Karten -->
+<section class="pt-8 pb-8 md:pt-12 md:pb-12">
+  <div class="container">
+    <div class="grid gap-6 md:grid-cols-3 max-w-4xl mx-auto">
+      {features.map((f) => (
+        <div class="group rounded-lg border border-border bg-card text-card-foreground shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-up overflow-hidden">
+          <div class="relative h-40 overflow-hidden">
+            <img src={f.image} alt={f.title} loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-lg">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={icons[f.icon]} />
+            </div>
+          </div>
+          <div class="pt-4 pb-2 px-6"><h3 class="text-lg font-semibold">{f.title}</h3></div>
+          <div class="px-6 pb-6">
+            <p class="mb-4 text-sm text-muted-foreground">{f.description}</p>
+            <a href={localizePath(f.href, lang)} class="inline-flex items-center text-sm font-medium text-primary hover:underline">
+              {t('common.learnMore')}
+              <svg class="ml-1 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="pb-12">
+  <div class="container">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-3xl font-bold tracking-tight text-foreground md:text-4xl">{desc.ctaTitle}</h2>
+      <p class="mt-4 text-lg text-muted-foreground">{desc.ctaText}</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href={localizePath('/membership', lang)} class="inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 font-medium text-accent-foreground transition hover:opacity-90">{t('hero.cta.membership')}</a>
+        <a href={localizePath('/contact', lang)} class="inline-flex items-center justify-center rounded-lg border border-border bg-background px-6 py-3 font-medium text-foreground transition hover:bg-accent/10">{t('nav.contact')}</a>
+      </div>
+    </div>
+  </div>
+</section>

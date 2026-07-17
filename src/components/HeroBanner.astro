@@ -1,0 +1,41 @@
+---
+import { getImage } from 'astro:assets';
+import churchIllustration from '../assets/church-illustration.png';
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  compact?: boolean; // kleinere Variante für Unterseiten
+}
+
+const { title, subtitle, compact = false } = Astro.props;
+
+// 3-MB-PNG einmalig zu optimiertem WebP (statt Roh-PNG als CSS-Hintergrund).
+const bg = await getImage({ src: churchIllustration, format: 'webp', width: 1600 });
+
+const logoColors = ['coral', 'orange', 'yellow', 'green', 'teal', 'purple'];
+---
+
+<section class:list={['relative flex items-center overflow-hidden', compact ? 'h-[220px] md:h-[320px]' : 'h-[280px] md:h-[440px]']}>
+  <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style={`background-image: url(${bg.src})`}></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/70 to-primary/50"></div>
+
+  <!-- Regenbogen-Akzent links -->
+  <div class="absolute left-0 top-0 bottom-0 w-2 flex flex-col">
+    {logoColors.map((c) => <div class="flex-1" style={`background: hsl(var(--logo-${c}))`}></div>)}
+  </div>
+
+  <div class="container relative z-10">
+    <div class="mx-auto max-w-3xl text-center">
+      <h1 class="animate-fade-up text-2xl font-bold tracking-tight text-white drop-shadow-lg sm:text-3xl md:text-4xl lg:text-5xl">{title}</h1>
+      {subtitle && <p class="animate-fade-up animation-delay-200 mt-6 text-lg text-white/95 drop-shadow md:text-xl">{subtitle}</p>}
+    </div>
+  </div>
+
+  <!-- Dekorative Welle -->
+  <div class="absolute bottom-0 left-0 right-0">
+    <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-[60px] md:h-[80px] lg:h-[100px] xl:h-[120px]" preserveAspectRatio="none">
+      <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="hsl(var(--background))"/>
+    </svg>
+  </div>
+</section>

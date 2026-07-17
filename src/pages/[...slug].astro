@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HomeContent from '../components/pages/HomeContent.astro';
+import ContactContent from '../components/pages/ContactContent.astro';
+import { languages, defaultLang, useTranslations, type Lang, type UIKey } from '../i18n/ui';
+
+const COMPONENTS: Record<string, any> = {
+  home: HomeContent,
+  contact: ContactContent,
+};
+
+export function getStaticPaths() {
+  // Seiten-Registry: id -> Pfad + Meta. Neue portierte Seiten hier ergänzen.
+  // (Muss INNERHALB von getStaticPaths stehen — isolierter Scope.)
+  const PAGES = [
+    { id: 'home', path: '', titleKey: null, descKey: 'hero.subtitle' },
+    { id: 'contact', path: 'contact', titleKey: 'contact.title', descKey: 'contact.intro' },
+  ] as const;
+
+  const langs = Object.keys(languages) as Lang[];
+  const paths = [];
+  for (const lang of langs) {
+    for (const page of PAGES) {
+      const seg = lang === defaultLang ? '' : lang;
+      const slug = [seg, page.path].filter(Boolean).join('/');
+      paths.push({
+        params: { slug: slug || undefined },
+        props: { pageId: page.id, lang, titleKey: page.titleKey, descKey: page.descKey },
+      });
+    }
+  }
+  return paths;
+}
+
+const { pageId, lang, titleKey, descKey } = Astro.props as {
+  pageId: string; lang: Lang; titleKey: UIKey | null; descKey: UIKey;
+};
+const t = useTranslations(lang);
+const Content = COMPONENTS[pageId];
+const title = titleKey ? t(titleKey) : undefined;
+const description = t(descKey);
+---
+
+<Layout title={title} description={description}>
+  <Content lang={lang} />
+</Layout>

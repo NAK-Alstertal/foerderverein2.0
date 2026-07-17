@@ -1,0 +1,125 @@
+---
+import { Image } from 'astro:assets';
+import HeroBanner from '../HeroBanner.astro';
+import gemeindeAussen from '../../assets/gemeinde-aussen.jpg';
+import { useTranslations, type Lang } from '../../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<HeroBanner title={t('contact.title')} subtitle={t('contact.intro')} compact />
+
+<section class="pt-8 pb-16 md:pt-12 md:pb-24">
+  <div class="container">
+    <div class="mx-auto max-w-2xl space-y-8">
+
+      <!-- Adress-Karte -->
+      <div class="group rounded-lg border border-border bg-card text-card-foreground shadow-sm overflow-hidden animate-fade-up">
+        <div class="relative h-40 overflow-hidden">
+          <Image src={gemeindeAussen} alt={t('contact.address.title')} widths={[400, 800]} sizes="(max-width: 768px) 100vw, 672px" class="w-full h-full object-cover object-right transition-transform duration-500 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
+          <div class="absolute bottom-3 left-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-lg">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+        </div>
+        <div class="pt-4 pb-2 px-6"><h2 class="text-xl font-semibold">{t('contact.address.title')}</h2></div>
+        <div class="px-6 pb-6">
+          <address class="not-italic text-muted-foreground space-y-1">
+            <p class="font-semibold text-foreground">Förderverein der Neuapostolischen Kirchengemeinde Hamburg-Alstertal e.V.</p>
+            <p>Dweerblöcken 8</p>
+            <p>22393 Hamburg</p>
+            <p>Deutschland</p>
+          </address>
+        </div>
+      </div>
+
+      <!-- Kontaktformular -->
+      <div class="rounded-lg border border-border bg-card text-card-foreground shadow-sm animate-fade-up animation-delay-200">
+        <div class="pt-6 pb-2 px-6">
+          <h2 class="flex items-center gap-2 text-xl font-semibold">
+            <svg class="h-5 w-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+            {t('contact.form.title')}
+          </h2>
+        </div>
+        <div class="px-6 pb-6">
+          <div id="contact-success" class="hidden items-center gap-3 rounded-lg bg-green-50 p-4 text-green-700">
+            <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+            <p class="text-sm font-medium">{t('contact.form.success')}</p>
+          </div>
+
+          <form id="contact-form" class="space-y-4">
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div class="space-y-1.5">
+                <label for="cf-name" class="text-sm font-medium text-foreground">{t('contact.form.name')} *</label>
+                <input id="cf-name" name="name" required placeholder={t('contact.form.name')}
+                  class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" />
+              </div>
+              <div class="space-y-1.5">
+                <label for="cf-email" class="text-sm font-medium text-foreground">{t('contact.form.email')} *</label>
+                <input id="cf-email" name="email" type="email" required placeholder="name@beispiel.de"
+                  class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" />
+              </div>
+            </div>
+            <div class="space-y-1.5">
+              <label for="cf-message" class="text-sm font-medium text-foreground">{t('contact.form.message')} *</label>
+              <textarea id="cf-message" name="message" rows="5" required placeholder={t('contact.form.message')}
+                class="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring resize-none"></textarea>
+            </div>
+
+            <div id="contact-error" class="hidden items-center gap-3 rounded-lg bg-red-50 p-3 text-red-700">
+              <svg class="h-4 w-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+              <p class="text-sm">{t('contact.form.error')}</p>
+            </div>
+
+            <button type="submit" id="cf-submit"
+              class="inline-flex w-full items-center justify-center gap-2 rounded-md bg-orange-500 px-6 py-3 text-sm font-medium text-white transition hover:bg-orange-600 disabled:opacity-60"
+              data-label={t('contact.form.submit')} data-sending={t('contact.form.sending')}>
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+              <span data-role="label">{t('contact.form.submit')}</span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
+  const btn = document.getElementById('cf-submit') as HTMLButtonElement | null;
+  const okBox = document.getElementById('contact-success');
+  const errBox = document.getElementById('contact-error');
+  const label = btn?.querySelector('[data-role="label"]');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    errBox?.classList.add('hidden');
+    errBox?.classList.remove('flex');
+    if (btn) { btn.disabled = true; if (label) label.textContent = btn.dataset.sending || 'Sende…'; }
+
+    const data = {
+      name: (document.getElementById('cf-name') as HTMLInputElement)?.value ?? '',
+      email: (document.getElementById('cf-email') as HTMLInputElement)?.value ?? '',
+      message: (document.getElementById('cf-message') as HTMLTextAreaElement)?.value ?? '',
+    };
+
+    try {
+      const res = await fetch('https://verein.nak-alstertal.de/api/contact/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      form.classList.add('hidden');
+      okBox?.classList.remove('hidden');
+      okBox?.classList.add('flex');
+    } catch {
+      errBox?.classList.remove('hidden');
+      errBox?.classList.add('flex');
+      if (btn) { btn.disabled = false; if (label) label.textContent = btn.dataset.label || 'Senden'; }
+    }
+  });
+</script>
