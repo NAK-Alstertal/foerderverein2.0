@@ -93,7 +93,12 @@ const large = (u: string) => u.replace('w=600', 'w=1200');
 </div>
 
 <script>
-  const lb = document.getElementById('lightbox') as HTMLElement;
+  // Dieses Script wird (wegen statischer Imports in der Catch-all-Route) auf
+  // ALLEN Seiten gebündelt. Nur aktiv werden, wenn die Lightbox real im DOM
+  // ist — sonst würde der Null-Zugriff das gemeinsame Bundle abbrechen und
+  // z. B. den Kontaktformular-Handler killen.
+  const lb = document.getElementById('lightbox') as HTMLElement | null;
+  if (lb) {
   const img = document.getElementById('lb-img') as HTMLImageElement;
   const counter = document.getElementById('lb-counter') as HTMLElement;
   let imgs: string[] = [];
@@ -126,4 +131,5 @@ const large = (u: string) => u.replace('w=600', 'w=1200');
     if (e.key === 'ArrowLeft') { idx = (idx - 1 + imgs.length) % imgs.length; render(); }
     if (e.key === 'ArrowRight') { idx = (idx + 1) % imgs.length; render(); }
   });
+  }
 </script>
