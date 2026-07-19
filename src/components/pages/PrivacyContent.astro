@@ -17,34 +17,58 @@ const sections = de
   ? [
       { h: '1. Verantwortlicher', addr: true },
       { h: '2. Datenverarbeitung beim Besuch der Website', p: [
-        'Unsere Website dient ausschließlich der Information. Du kannst sie ohne Angabe personenbezogener Daten nutzen.',
+        'Unsere Website dient der Information. Für die rein informatorische Nutzung ist keine Angabe personenbezogener Daten erforderlich; nutzt du unser Kontaktformular, gelten zusätzlich die Angaben unter Ziffer 3.',
         'Beim Aufruf der Website werden durch den Webserver automatisch folgende Daten verarbeitet:',
       ], ul: ['IP-Adresse', 'Datum und Uhrzeit des Zugriffs', 'aufgerufene Seite', 'Browsertyp und Betriebssystem'], p2: [
         'Diese Daten werden in sogenannten Server-Logfiles gespeichert. Sie dienen ausschließlich dem technischen Betrieb, der Sicherheit und der Fehleranalyse der Website.',
         'Eine Zusammenführung dieser Daten mit anderen Datenquellen oder eine Auswertung zu Marketingzwecken findet nicht statt.',
         'Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem sicheren und funktionsfähigen Internetauftritt).',
       ] },
-      { h: '3. Cookies', p: ['Unsere Website verwendet keine Cookies, die personenbezogene Daten speichern oder Nutzer verfolgen.'] },
-      { h: '4. Weitergabe von Daten', p: ['Deine Daten werden nicht an Dritte weitergegeben.'] },
-      { h: '5. Speicherdauer', p: ['Server-Logfiles werden nur so lange gespeichert, wie dies aus technischen oder sicherheitsrelevanten Gründen erforderlich ist, und anschließend gelöscht.'] },
-      { h: '6. Deine Rechte', p: ['Du hast jederzeit folgende Rechte:'], ul: ['Auskunft über deine gespeicherten Daten', 'Berichtigung unrichtiger Daten', 'Löschung deiner Daten', 'Einschränkung der Verarbeitung', 'Widerspruch gegen die Verarbeitung'], p2: ['Außerdem hast du das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.'] },
-      { h: '7. Kontakt', contact: 'Wenn du Fragen zum Datenschutz hast, schreib uns bitte an:' },
+      { h: '3. Kontaktformular', p: [
+        'Wenn du uns über das Kontaktformular eine Nachricht schickst, verarbeiten wir die von dir angegebenen Daten, um deine Anfrage zu bearbeiten:',
+      ], ul: ['Name', 'E-Mail-Adresse', 'Inhalt deiner Nachricht'], p2: [
+        'Die Übermittlung erfolgt als E-Mail an uns; für den technischen Versand nutzen wir den Dienstleister Postmark (ActiveCampaign, LLC), mit dem ein Auftragsverarbeitungsvertrag besteht. Eine darüber hinausgehende Speicherung in einer Datenbank findet nicht statt.',
+        'Rechtsgrundlage ist deine Einwilligung durch das Absenden des Formulars (Art. 6 Abs. 1 lit. a DSGVO) sowie unser berechtigtes Interesse an der Beantwortung deines Anliegens (Art. 6 Abs. 1 lit. f DSGVO).',
+        'Wir speichern die Daten nur so lange, wie es zur Bearbeitung deiner Anfrage erforderlich ist, und löschen sie anschließend, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.',
+      ] },
+      { h: '4. Hosting', p: [
+        'Unsere Website wird bei der Hetzner Online GmbH (Gunzenhausen, Deutschland) gehostet. Hetzner verarbeitet die beim Websitebesuch anfallenden Daten in unserem Auftrag auf Grundlage eines Auftragsverarbeitungsvertrags nach Art. 28 DSGVO. Die Verarbeitung erfolgt ausschließlich auf Servern in Deutschland.',
+      ] },
+      { h: '5. Cookies', p: ['Unsere Website verwendet keine Cookies, die personenbezogene Daten speichern oder Nutzer verfolgen.'] },
+      { h: '6. Weitergabe von Daten', p: ['Deine Daten werden nicht zu Werbezwecken an Dritte weitergegeben. Eine Übermittlung erfolgt nur an die unter Ziffer 3 und 4 genannten Auftragsverarbeiter sowie, soweit wir gesetzlich dazu verpflichtet sind.'] },
+      { h: '7. Speicherdauer', p: ['Server-Logfiles werden nur so lange gespeichert, wie dies aus technischen oder sicherheitsrelevanten Gründen erforderlich ist, und anschließend gelöscht. Für Kontaktanfragen gilt die Speicherdauer nach Ziffer 3.'] },
+      { h: '8. Deine Rechte', p: ['Du hast jederzeit folgende Rechte:'], ul: ['Auskunft über deine gespeicherten Daten (Art. 15 DSGVO)', 'Berichtigung unrichtiger Daten (Art. 16 DSGVO)', 'Löschung deiner Daten (Art. 17 DSGVO)', 'Einschränkung der Verarbeitung (Art. 18 DSGVO)', 'Datenübertragbarkeit (Art. 20 DSGVO)', 'Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)', 'Widerruf einer erteilten Einwilligung mit Wirkung für die Zukunft'], p2: [
+        'Außerdem hast du das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Für uns zuständig ist: Der Hamburgische Beauftragte für Datenschutz und Informationsfreiheit, Ludwig-Erhard-Str. 22, 20459 Hamburg.',
+      ] },
+      { h: '9. Kontakt', contact: 'Wenn du Fragen zum Datenschutz hast oder eines deiner Rechte ausüben möchtest, schreib uns bitte an:' },
     ]
   : [
       { h: '1. Responsible Party', addr: true },
       { h: '2. Data Processing When Visiting the Website', p: [
-        'Our website is for informational purposes only. You can use it without providing personal data.',
+        'Our website provides information. No personal data is required for purely informational use; if you use our contact form, the information under section 3 additionally applies.',
         'When accessing the website, the web server automatically processes the following data:',
       ], ul: ['IP address', 'Date and time of access', 'accessed page', 'Browser type and operating system'], p2: [
         'This data is stored in so-called server log files. They are used exclusively for technical operation, security, and error analysis of the website.',
         'This data is not merged with other data sources or used for marketing purposes.',
         'The legal basis is Art. 6 para. 1 lit. f GDPR (legitimate interest in a secure and functional website).',
       ] },
-      { h: '3. Cookies', p: ['Our website does not use cookies that store personal data or track users.'] },
-      { h: '4. Data Sharing', p: ['Your data will not be shared with third parties.'] },
-      { h: '5. Storage Duration', p: ['Server log files are only stored for as long as necessary for technical or security reasons, and then deleted.'] },
-      { h: '6. Your Rights', p: ['You have the following rights at any time:'], ul: ['Information about your stored data', 'Correction of inaccurate data', 'Deletion of your data', 'Restriction of processing', 'Objection to processing'], p2: ['You also have the right to lodge a complaint with a data protection supervisory authority.'] },
-      { h: '7. Contact', contact: 'If you have questions about data protection, please contact us at:' },
+      { h: '3. Contact Form', p: [
+        'If you send us a message via the contact form, we process the data you provide in order to handle your request:',
+      ], ul: ['Name', 'Email address', 'Content of your message'], p2: [
+        'Transmission takes place as an email to us; for technical delivery we use the provider Postmark (ActiveCampaign, LLC), with whom a data processing agreement is in place. No further storage in a database takes place.',
+        'The legal basis is your consent by submitting the form (Art. 6 para. 1 lit. a GDPR) and our legitimate interest in responding to your request (Art. 6 para. 1 lit. f GDPR).',
+        'We store the data only for as long as necessary to process your request and delete it afterwards, unless statutory retention obligations apply.',
+      ] },
+      { h: '4. Hosting', p: [
+        'Our website is hosted by Hetzner Online GmbH (Gunzenhausen, Germany). Hetzner processes the data generated when visiting the website on our behalf on the basis of a data processing agreement pursuant to Art. 28 GDPR. Processing takes place exclusively on servers in Germany.',
+      ] },
+      { h: '5. Cookies', p: ['Our website does not use cookies that store personal data or track users.'] },
+      { h: '6. Data Sharing', p: ['Your data will not be shared with third parties for advertising purposes. Transmission only takes place to the processors named in sections 3 and 4, or where we are legally obliged to do so.'] },
+      { h: '7. Storage Duration', p: ['Server log files are only stored for as long as necessary for technical or security reasons, and then deleted. For contact requests, the storage period under section 3 applies.'] },
+      { h: '8. Your Rights', p: ['You have the following rights at any time:'], ul: ['Information about your stored data (Art. 15 GDPR)', 'Correction of inaccurate data (Art. 16 GDPR)', 'Deletion of your data (Art. 17 GDPR)', 'Restriction of processing (Art. 18 GDPR)', 'Data portability (Art. 20 GDPR)', 'Objection to processing (Art. 21 GDPR)', 'Withdrawal of a given consent with effect for the future'], p2: [
+        'You also have the right to lodge a complaint with a data protection supervisory authority. The authority responsible for us is: Der Hamburgische Beauftragte für Datenschutz und Informationsfreiheit, Ludwig-Erhard-Str. 22, 20459 Hamburg, Germany.',
+      ] },
+      { h: '9. Contact', contact: 'If you have questions about data protection or wish to exercise one of your rights, please contact us at:' },
     ];
 ---
 
