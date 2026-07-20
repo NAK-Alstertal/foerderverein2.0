@@ -31,7 +31,7 @@ const langCodes = Object.keys(languages) as Lang[];
 <header class="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
   <div class="container flex h-16 items-center justify-between">
     <a href={localizePath('/', lang)} class="flex items-center">
-      <Image src={logo} alt="Förderverein NAK Alstertal Logo" width={44} height={44} class="h-11 w-11 rounded-lg transition-transform duration-200 hover:scale-110" />
+      <Image src={logo} alt="Förderverein NAK Alstertal Logo" width={44} height={44} densities={[2, 3]} class="h-11 w-11 rounded-lg transition-transform duration-200 hover:scale-110" />
     </a>
 
     <nav class="hidden lg:flex items-center gap-1">
