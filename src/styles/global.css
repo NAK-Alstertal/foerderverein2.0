@@ -30,7 +30,7 @@
     --muted-foreground: 215 20% 45%;
 
     /* Accent: Warm Orange (from logo) */
-    --accent: 30 85% 37%;
+    --accent: 30 85% 55%;
     --accent-foreground: 0 0% 100%;
 
     /* Logo Colors for decorative use */
@@ -75,7 +75,7 @@
     --muted: 215 35% 18%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 30 85% 37%;
+    --accent: 30 85% 55%;
     --accent-foreground: 0 0% 100%;
 
     --logo-blue: 215 55% 55%;
