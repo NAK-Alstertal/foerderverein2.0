@@ -68,3 +68,57 @@ const icons = {
     </div>
   </div>
 </section>
+
+<!-- Geschichte, Mission, Wirkung, Transparenz (ergänzt 06.10.2026 für den Gemeinnützigkeits-Nachweis) -->
+<section class="pb-16 md:pb-24">
+  <div class="container">
+    <div class="mx-auto max-w-4xl space-y-12">
+      <div>
+        <h2 class="text-2xl font-semibold text-foreground mb-3">{t('about.history.title')}</h2>
+        <p class="text-base text-muted-foreground leading-relaxed">{t('about.history.text')}</p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-semibold text-foreground mb-3">{t('about.mission.title')}</h2>
+        <p class="text-base text-muted-foreground leading-relaxed">{t('about.mission.text')}</p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-semibold text-foreground mb-3">{t('about.impact.title')}</h2>
+        <ul class="list-disc pl-6 space-y-2 text-base text-muted-foreground leading-relaxed">
+          <li>{t('about.impact.1')}</li>
+          <li>{t('about.impact.2')}</li>
+          <li>{t('about.impact.3')}</li>
+          <li>{t('about.impact.4')}</li>
+        </ul>
+      </div>
+
+      <div id="transparenz">
+        <h2 class="text-2xl font-semibold text-foreground mb-4">{t('about.transparency.title')}</h2>
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="rounded-lg border border-border bg-card p-6">
+            <h3 class="font-semibold text-foreground mb-2">{t('about.transparency.legal')}</h3>
+            <p class="text-sm text-muted-foreground leading-relaxed">{t('about.transparency.legalText')}</p>
+          </div>
+          <div class="rounded-lg border border-border bg-card p-6">
+            <h3 class="font-semibold text-foreground mb-2">{t('about.transparency.charity')}</h3>
+            <p class="text-sm text-muted-foreground leading-relaxed">{t('about.transparency.charityText')}</p>
+          </div>
+          <div class="rounded-lg border border-border bg-card p-6">
+            <h3 class="font-semibold text-foreground mb-2">{t('about.transparency.board')}</h3>
+            <p class="text-sm text-muted-foreground leading-relaxed">{t('about.transparency.boardText')}</p>
+          </div>
+          <div class="rounded-lg border border-border bg-card p-6">
+            <h3 class="font-semibold text-foreground mb-2">{t('about.transparency.domains')}</h3>
+            <p class="text-sm text-muted-foreground leading-relaxed">{t('about.transparency.domainsText')}</p>
+            <p class="text-sm mt-3">
+              <a href="https://nak-alstertal.de" class="text-primary hover:underline">nak-alstertal.de</a>
+              <span class="text-muted-foreground"> · </span>
+              <a href="https://verein.nak-alstertal.de" class="text-primary hover:underline">verein.nak-alstertal.de</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

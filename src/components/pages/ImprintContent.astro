@@ -8,8 +8,12 @@ const t = useTranslations(lang);
 const de = lang === 'de';
 
 const x = de
-  ? { subtitle: 'Angaben gemäß § 5 TMG', address: 'Anschrift', court: 'Registergericht', regno: 'Vereinsregisternummer', board: 'Vorstand', contact: 'Kontakt', disclaimer: 'Haftungsausschluss' }
-  : { subtitle: 'Information according to § 5 TMG', address: 'Address', court: 'Court of Registration', regno: 'Registration Number', board: 'Board', contact: 'Contact', disclaimer: 'Disclaimer' };
+  ? { subtitle: 'Angaben gemäß § 5 TMG', address: 'Anschrift', court: 'Registergericht', regno: 'Vereinsregisternummer', board: 'Vorstand', contact: 'Kontakt', disclaimer: 'Haftungsausschluss',
+      charity: 'Gemeinnützigkeit', charityText: 'Der Verein ist als gemeinnützig anerkannt (Förderung der Religion und kirchlicher Zwecke im Sinne der Abgabenordnung).',
+      domains: 'Domains', domainsText: 'Der Förderverein ist Inhaber und Betreiber der Domain nak-alstertal.de einschließlich des Gemeindeportals nak-alstertal.de und dieser Website verein.nak-alstertal.de.' }
+  : { subtitle: 'Information according to § 5 TMG', address: 'Address', court: 'Court of Registration', regno: 'Registration Number', board: 'Board', contact: 'Contact', disclaimer: 'Disclaimer',
+      charity: 'Charitable status', charityText: 'The association is recognised as a charity (promotion of religion and church purposes within the meaning of the German Fiscal Code).',
+      domains: 'Domains', domainsText: 'The association is the owner and operator of the domain nak-alstertal.de, including the congregation portal nak-alstertal.de and this website verein.nak-alstertal.de.' };
 
 const disclaimer = de
   ? [
@@ -38,6 +42,14 @@ const disclaimer = de
           <p class="text-muted-foreground mt-4">
             {x.court}: Amtsgericht Hamburg<br />{x.regno}: VR 25331
           </p>
+          <div class="mt-4">
+            <h2 class="text-lg font-semibold text-foreground mb-2">{x.charity}</h2>
+            <p class="text-muted-foreground">{x.charityText}</p>
+          </div>
+          <div class="mt-4">
+            <h2 class="text-lg font-semibold text-foreground mb-2">{x.domains}</h2>
+            <p class="text-muted-foreground">{x.domainsText} <a href="https://nak-alstertal.de" class="hover:text-primary transition-colors underline">nak-alstertal.de</a></p>
+          </div>
         </div>
         <div class="space-y-6">
           <div>
