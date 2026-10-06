@@ -26,8 +26,12 @@ const logoColors = ['coral', 'orange', 'yellow', 'green', 'teal', 'blue', 'purpl
             Förderverein der Neuapostolischen Kirchengemeinde<br />Hamburg-Alstertal e.V.
           </span>
         </div>
-        <p class="text-sm text-muted-foreground max-w-xs">{t('footer.nonprofit')} · Amtsgericht Hamburg, VR 25331</p>
-        <p class="text-sm text-muted-foreground max-w-xs"><a href="https://nak-alstertal.de" class="hover:text-foreground transition-colors">nak-alstertal.de</a></p>
+        <!-- Gemeinnützigkeit, Registernummer und Domain-Hinweis auf jeder Seite (Google for Nonprofits, 06.10.2026) -->
+        <p class="text-sm text-muted-foreground max-w-xs">
+          {t('footer.nonprofit')}<br />
+          {t('footer.register')}
+        </p>
+        <p class="text-sm text-muted-foreground max-w-xs">{t('footer.domain')}</p>
       </div>
 
       <div class="space-y-4">
@@ -45,6 +49,7 @@ const logoColors = ['coral', 'orange', 'yellow', 'green', 'teal', 'blue', 'purpl
         <nav class="flex flex-col gap-2">
           <a href={localizePath('/imprint', lang)} class="text-sm text-muted-foreground hover:text-foreground transition-colors">{t('nav.imprint')}</a>
           <a href={localizePath('/privacy', lang)} class="text-sm text-muted-foreground hover:text-foreground transition-colors">{t('nav.privacy')}</a>
+          <a href="https://nak-alstertal.de/" class="text-sm text-muted-foreground hover:text-foreground transition-colors">{t('footer.portal')}: nak-alstertal.de</a>
         </nav>
       </div>
     </div>

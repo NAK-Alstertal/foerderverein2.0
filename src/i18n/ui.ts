@@ -38,14 +38,16 @@ export const ui = {
     'about.statute.text': 'Laden Sie unsere vollständige Vereinssatzung herunter.',
     'about.statute.download': 'Satzung herunterladen (PDF)',
     'about.history.title': 'Unsere Geschichte',
-    'about.history.text': 'Der Förderverein wurde am 25. September 2022 von Mitgliedern der Neuapostolischen Kirchengemeinde Hamburg-Alstertal gegründet und am 22. Juni 2023 unter der Nummer VR 25331 in das Vereinsregister beim Amtsgericht Hamburg eingetragen. Mit der Satzungsänderung vom 16. Januar 2025 (eingetragen am 2. Dezember 2025) wurde das Streaming der Gottesdienste ausdrücklich als Förderzweck aufgenommen. 2025 hat ein neuer Vorstand Strukturen und Ziele neu geordnet, seit 2026 werden die ersten größeren Projekte sichtbar.',
+    'about.history.text': "Unser Verein ist aus dem Engagement einzelner Gemeindemitglieder entstanden. Über Jahre hinweg wurden Anschaffungen für die Gemeinde, vom Mobilfunkanschluss bis zur Übertragungstechnik, privat vorgestreckt. Am 25. September 2022 gründeten Mitglieder der Neuapostolischen Kirchengemeinde Hamburg-Alstertal daraus den Förderverein, mit dem Ziel, die Arbeit der Gemeinde dauerhaft und auf eine breite Grundlage gestellt zu unterstützen.\n\nAm 22. Juni 2023 wurde der Verein in das Vereinsregister beim Amtsgericht Hamburg eingetragen (VR 25331). Das Finanzamt hat ihn als gemeinnützig anerkannt, weil er ausschließlich die Religion und kirchliche Zwecke fördert. Am 16. Januar 2025 hat die Mitgliederversammlung die Satzung einmal angepasst; diese Fassung ist seit Dezember 2025 eingetragen. Der Vorstand arbeitet ehrenamtlich, zwei gewählte Kassenprüfer prüfen jedes Jahr die gesamte Buch- und Kassenführung.",
     'about.mission.title': 'Mission und Vision',
     'about.mission.text': 'Unsere Mission: Wir beschaffen die Mittel, die eine lebendige Gemeindearbeit braucht, und setzen sie dort ein, wo sie am meisten bewirken: bei Kindern und Jugendlichen, in der Kirchenmusik, am Kirchengebäude und beim Streaming der Gottesdienste. Unsere Vision: eine Gemeinde in Hamburg-Alstertal, in der jede Generation ihren Platz findet und in der niemand vom Gottesdienst ausgeschlossen bleibt, auch nicht, wer nicht mehr in die Kirche kommen kann.',
     'about.impact.title': 'Was wir bewirken',
-    'about.impact.1': 'Gottesdienste im Livestream: Die vom Verein geförderte Technik im Kirchsaal lässt kranke, ältere und verreiste Mitglieder jeden Sonntag von zu Hause aus mitfeiern.',
-    'about.impact.2': 'Neue Orgel mit drittem Manual: Spenden und Beiträge ermöglichen, dass das neue Instrument mit einem zusätzlichen dritten Manual beschafft werden kann.',
-    'about.impact.3': 'Jugendhütte im Kirchengarten: Mit einer Förderung der Sparkasse Hamburg entsteht ein eigener Treffpunkt für Jugendliche.',
-    'about.impact.4': 'Kindgerechter Kirchengarten: Eine Spielfläche für Kinder, damit Familien Gemeindeveranstaltungen entspannt erleben können.',
+    'about.impact.text': "Alles, was wir sammeln, fließt in die Gemeinde Hamburg-Alstertal. Unsere Satzung nennt vier Schwerpunkte, und in jedem davon ist in den vergangenen Jahren etwas Greifbares entstanden:",
+
+    'about.impact.1': "Kinder und Jugend: Im Kirchgarten haben wir ein Gartenhaus errichtet, das wir zu einer Jugendhütte ausbauen, einem eigenen Treffpunkt für junge Menschen. Der Garten bekommt eine Spielfläche für Kinder, und für den Religionsunterricht haben wir Bibeln angeschafft. Für die Jugendhütte haben wir eine Zuwendung der Hamburger Sparkasse erhalten.",
+    'about.impact.2': "Kirchenmusik: Unsere Kirche bekommt eine neue Orgel. Mit Spenden ermöglichen wir, dass das Instrument um ein drittes Manual erweitert wird. Außerdem tragen wir die Lizenzen, damit Liedtexte im Gottesdienst gezeigt und übertragen werden dürfen.",
+    'about.impact.3': "Kirchengebäude: Wir ergänzen die Arbeit der Kirchenverwaltung dort, wo es im Alltag der Gemeinde fehlt, zum Beispiel mit einem Industrie-Geschirrspüler für die Gemeindeküche, einem Terminmonitor im Eingangsbereich und der Neugestaltung des Kirchgartens.",
+    'about.impact.4': "Gottesdienste im Livestream: Seit mehreren Jahren können Gemeindemitglieder, die nicht in die Kirche kommen können, die Gottesdienste zu Hause mitfeiern. Der Verein finanziert die dafür nötige Übertragungstechnik, den Internetanschluss und die laufenden Dienste, und er hat 2025 und 2026 den Umbau der Ton- und Bildtechnik im Kirchsaal getragen.",
     'about.transparency.title': 'Transparenz',
     'about.transparency.legal': 'Rechtsform und Register',
     'about.transparency.legalText': 'Eingetragener Verein, Registergericht Amtsgericht Hamburg, Vereinsregisternummer VR 25331. Sitz: Dweerblöcken 8, 22393 Hamburg.',
@@ -103,7 +105,13 @@ export const ui = {
     'contact.form.error': 'Etwas ist schiefgelaufen. Bitte versuch es später nochmal.',
 
     'footer.rights': 'Alle Rechte vorbehalten.',
-    'footer.nonprofit': 'Gemeinnütziger Verein',
+    'footer.nonprofit': "Gemeinnützig anerkannter Verein",
+
+    'footer.register': "Eingetragen beim Amtsgericht Hamburg, Vereinsregister VR 25331",
+
+    'footer.domain': "nak-alstertal.de ist die Domain des Vereins. Dazu gehören diese Website (verein.nak-alstertal.de) und das Gemeindeportal nak-alstertal.de.",
+
+    'footer.portal': "Gemeindeportal",
     'footer.links': 'Links',
     'footer.legal': 'Rechtliches',
 
@@ -136,14 +144,16 @@ export const ui = {
     'about.statute.text': 'Download our complete association statute.',
     'about.statute.download': 'Download Statute (PDF)',
     'about.history.title': 'Our History',
-    'about.history.text': 'The association was founded on 25 September 2022 by members of the New Apostolic congregation Hamburg-Alstertal and entered in the register of associations at Hamburg District Court on 22 June 2023 under number VR 25331. With the amendment of the statutes dated 16 January 2025 (registered on 2 December 2025), livestreaming of church services was explicitly added as a funding purpose. In 2025 a new board reorganised structures and goals; since 2026 the first larger projects are becoming visible.',
+    'about.history.text': "Our association grew out of the commitment of individual members of the congregation. For years, purchases for the congregation, from the mobile phone line to the broadcasting equipment, were paid for privately in advance. On 25 September 2022, members of the New Apostolic congregation Hamburg-Alstertal founded the support association to put this work on a lasting and broad footing.\n\nOn 22 June 2023 the association was entered in the register of associations at Hamburg District Court (VR 25331). The tax office has recognised it as a charitable organisation because it exclusively promotes religion and church purposes. On 16 January 2025 the general meeting amended the statutes once; this version has been registered since December 2025. The board works on a voluntary basis, and two elected auditors review the complete accounts and cash management every year.",
     'about.mission.title': 'Mission and Vision',
     'about.mission.text': 'Our mission: we raise the funds that a vibrant congregation needs and put them where they make the biggest difference: children and youth, church music, the church building and the livestreaming of services. Our vision: a congregation in Hamburg-Alstertal where every generation finds its place and nobody is excluded from the service, not even those who can no longer come to church.',
     'about.impact.title': 'Our Impact',
-    'about.impact.1': 'Services via livestream: the technology in the church hall funded by the association lets sick, elderly and travelling members take part every Sunday from home.',
-    'about.impact.2': 'New organ with a third manual: donations and membership fees make it possible to purchase the new instrument with an additional third manual.',
-    'about.impact.3': 'Youth cabin in the church garden: with a grant from Sparkasse Hamburg, a dedicated meeting place for young people is being created.',
-    'about.impact.4': 'Child-friendly church garden: a play area for children so that families can enjoy congregation events in a relaxed way.',
+    'about.impact.text': "Everything we collect goes to the congregation Hamburg-Alstertal. Our statutes name four focus areas, and in each of them something tangible has been achieved in recent years:",
+
+    'about.impact.1': "Children and youth: In the church garden we built a garden house that we are converting into a youth cabin, a meeting place of their own for young people. The garden is getting a play area for children, and we purchased Bibles for religious education. For the youth cabin we received a grant from Hamburger Sparkasse.",
+    'about.impact.2': "Church music: Our church is getting a new organ. With donations we make it possible for the instrument to be extended by a third manual. We also cover the licences that allow song lyrics to be displayed and broadcast during services.",
+    'about.impact.3': "Church building: We complement the work of the church administration wherever something is missing in everyday congregational life, for example with an industrial dishwasher for the congregation kitchen, an appointment monitor in the entrance area and the redesign of the church garden.",
+    'about.impact.4': "Live-streamed services: For several years, members who cannot come to church have been able to join the services from home. The association finances the necessary broadcasting equipment, the internet connection and the running services, and in 2025 and 2026 it funded the overhaul of the audio and video equipment in the church hall.",
     'about.transparency.title': 'Transparency',
     'about.transparency.legal': 'Legal form and register',
     'about.transparency.legalText': 'Registered association (e.V.), register court Hamburg District Court (Amtsgericht Hamburg), registration number VR 25331. Registered office: Dweerblöcken 8, 22393 Hamburg, Germany.',
@@ -201,7 +211,13 @@ export const ui = {
     'contact.form.error': 'Something went wrong. Please try again later.',
 
     'footer.rights': 'All rights reserved.',
-    'footer.nonprofit': 'Non-profit organization',
+    'footer.nonprofit': "Registered charitable (non-profit) association",
+
+    'footer.register': "Registered at Hamburg District Court (Amtsgericht Hamburg), register of associations VR 25331",
+
+    'footer.domain': "nak-alstertal.de is the domain of the association. It covers this website (verein.nak-alstertal.de) and the congregation portal nak-alstertal.de.",
+
+    'footer.portal': "Congregation portal",
     'footer.links': 'Links',
     'footer.legal': 'Legal',
 
@@ -234,14 +250,16 @@ export const ui = {
     'about.statute.text': 'Téléchargez nos statuts complets.',
     'about.statute.download': 'Télécharger les statuts (PDF)',
     'about.history.title': 'Notre histoire',
-    'about.history.text': "L'association a été fondée le 25 septembre 2022 par des membres de la communauté néo-apostolique de Hambourg-Alstertal et inscrite au registre des associations du tribunal de Hambourg le 22 juin 2023 sous le numéro VR 25331. La modification des statuts du 16 janvier 2025 (inscrite le 2 décembre 2025) a ajouté expressément la diffusion en direct des services divins comme objectif. Depuis 2025, un nouveau comité a réorganisé les structures et les objectifs ; depuis 2026, les premiers grands projets deviennent visibles.",
+    'about.history.text': "Notre association est née de l'engagement de quelques membres de la congrégation. Pendant des années, des acquisitions pour la congrégation, de l'abonnement mobile à la technique de retransmission, ont été avancées à titre privé. Le 25 septembre 2022, des membres de la congrégation néo-apostolique Hamburg-Alstertal ont fondé l'association de soutien afin de placer ce travail sur une base durable et large.\n\nLe 22 juin 2023, l'association a été inscrite au registre des associations du tribunal de Hambourg (VR 25331). L'administration fiscale l'a reconnue d'utilité publique, car elle soutient exclusivement la religion et des objectifs ecclésiastiques. Le 16 janvier 2025, l'assemblée générale a modifié une fois les statuts ; cette version est enregistrée depuis décembre 2025. Le conseil d'administration travaille bénévolement, et deux vérificateurs élus contrôlent chaque année l'ensemble de la comptabilité et de la caisse.",
     'about.mission.title': 'Mission et vision',
     'about.mission.text': "Notre mission : réunir les moyens dont une communauté vivante a besoin et les employer là où ils ont le plus d'effet : enfants et jeunes, musique d'église, bâtiment de l'église et diffusion des services divins. Notre vision : une communauté à Hambourg-Alstertal où chaque génération trouve sa place et où personne n'est exclu du service divin, même ceux qui ne peuvent plus venir à l'église.",
     'about.impact.title': 'Notre impact',
-    'about.impact.1': "Services divins en direct : la technique financée par l'association permet aux membres malades, âgés ou en voyage de participer chaque dimanche depuis chez eux.",
-    'about.impact.2': 'Nouvel orgue avec un troisième clavier : les dons et cotisations permettent d\'acquérir le nouvel instrument avec un troisième clavier supplémentaire.',
-    'about.impact.3': "Cabane des jeunes dans le jardin de l'église : grâce à une subvention de la Sparkasse Hamburg, un lieu de rencontre pour les jeunes voit le jour.",
-    'about.impact.4': "Jardin adapté aux enfants : une aire de jeux pour que les familles profitent sereinement des événements de la communauté.",
+    'about.impact.text': "Tout ce que nous collectons va à la congrégation Hamburg-Alstertal. Nos statuts définissent quatre priorités, et dans chacune d'elles quelque chose de concret a vu le jour ces dernières années :",
+
+    'about.impact.1': "Enfants et jeunes : Dans le jardin de l'église, nous avons construit un abri de jardin que nous aménageons en cabane des jeunes, un lieu de rencontre qui leur est propre. Le jardin reçoit une aire de jeux pour les enfants, et nous avons acheté des bibles pour l'enseignement religieux. Pour la cabane des jeunes, nous avons reçu une subvention de la Hamburger Sparkasse.",
+    'about.impact.2': "Musique d'église : Notre église reçoit un nouvel orgue. Grâce aux dons, nous permettons d'étendre l'instrument d'un troisième clavier. Nous prenons aussi en charge les licences qui permettent d'afficher et de retransmettre les textes des chants pendant les services.",
+    'about.impact.3': "Bâtiment de l'église : Nous complétons le travail de l'administration de l'Église là où quelque chose manque au quotidien de la congrégation, par exemple avec un lave-vaisselle industriel pour la cuisine, un écran d'affichage des rendez-vous à l'entrée et le réaménagement du jardin de l'église.",
+    'about.impact.4': "Services divins en direct : Depuis plusieurs années, les membres qui ne peuvent pas venir à l'église peuvent suivre les services depuis chez eux. L'association finance la technique de retransmission nécessaire, la connexion internet et les services courants, et elle a pris en charge en 2025 et 2026 la rénovation de la technique audio et vidéo de la salle de culte.",
     'about.transparency.title': 'Transparence',
     'about.transparency.legal': 'Forme juridique et registre',
     'about.transparency.legalText': 'Association enregistrée (e.V.), tribunal de Hambourg (Amtsgericht Hamburg), numéro de registre VR 25331. Siège : Dweerblöcken 8, 22393 Hambourg, Allemagne.',
@@ -299,7 +317,13 @@ export const ui = {
     'contact.form.error': 'Une erreur est survenue. Veuillez réessayer plus tard.',
 
     'footer.rights': 'Tous droits réservés.',
-    'footer.nonprofit': 'Association à but non lucratif',
+    'footer.nonprofit': "Association reconnue d'utilité publique",
+
+    'footer.register': "Inscrite au tribunal de Hambourg (Amtsgericht Hamburg), registre des associations VR 25331",
+
+    'footer.domain': "nak-alstertal.de est le domaine de l'association. Il comprend ce site (verein.nak-alstertal.de) et le portail de la congrégation nak-alstertal.de.",
+
+    'footer.portal': "Portail de la congrégation",
     'footer.links': 'Liens',
     'footer.legal': 'Mentions légales',
 

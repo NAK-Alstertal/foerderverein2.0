@@ -8,6 +8,9 @@ interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 
+// Geschichte: Absätze durch Leerzeile getrennt (Text aus ui.ts).
+const history = t('about.history.text').split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
+
 const icons = {
   target: '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>',
   users: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
@@ -75,7 +78,9 @@ const icons = {
     <div class="mx-auto max-w-4xl space-y-12">
       <div>
         <h2 class="text-2xl font-semibold text-foreground mb-3">{t('about.history.title')}</h2>
-        <p class="text-base text-muted-foreground leading-relaxed">{t('about.history.text')}</p>
+        <div class="space-y-4">
+          {history.map((p) => <p class="text-base text-muted-foreground leading-relaxed">{p}</p>)}
+        </div>
       </div>
 
       <div>
@@ -85,7 +90,8 @@ const icons = {
 
       <div>
         <h2 class="text-2xl font-semibold text-foreground mb-3">{t('about.impact.title')}</h2>
-        <ul class="list-disc pl-6 space-y-2 text-base text-muted-foreground leading-relaxed">
+        <p class="text-base text-muted-foreground leading-relaxed mb-4">{t('about.impact.text')}</p>
+        <ul class="list-disc pl-6 space-y-3 text-base text-muted-foreground leading-relaxed">
           <li>{t('about.impact.1')}</li>
           <li>{t('about.impact.2')}</li>
           <li>{t('about.impact.3')}</li>
