@@ -55,8 +55,6 @@ export const ui = {
     'about.transparency.charityText': 'Der Verein verfolgt ausschließlich und unmittelbar gemeinnützige Zwecke im Sinne des Abschnitts „Steuerbegünstigte Zwecke" der Abgabenordnung (Förderung der Religion und kirchlicher Zwecke) und ist als gemeinnützig anerkannt. Spenden und Mitgliedsbeiträge sind steuerlich absetzbar, wir stellen Zuwendungsbestätigungen aus.',
     'about.transparency.board': 'Vorstand',
     'about.transparency.boardText': 'Prof. Dr. Christoph Großmann, Gerolf Pabst und Volkert Tainz. Der Vorstand arbeitet ehrenamtlich, je zwei Vorstandsmitglieder vertreten den Verein gemeinsam.',
-    'about.transparency.domains': 'Unsere Internetadressen',
-    'about.transparency.domainsText': 'verein.nak-alstertal.de ist die einzige Website des Fördervereins, und nur für sie ist er verantwortlich. Der Verein ist zwar Inhaber der Domain nak-alstertal.de, das Gemeindeportal nak-alstertal.de verantwortet jedoch Dr. Stefan Link persönlich und allein.',
 
     'membership.title': 'Mitglied werden',
     'membership.subtitle': 'Wir laden alle ein, die unsere Ziele und Werte teilen, Teil unseres Fördervereins zu werden.',
@@ -109,7 +107,6 @@ export const ui = {
 
     'footer.register': "Eingetragen beim Amtsgericht Hamburg, Vereinsregister VR 25331",
 
-    'footer.domain': "verein.nak-alstertal.de ist die einzige Website des Vereins. Die Domain nak-alstertal.de gehört ihm, das Gemeindeportal nak-alstertal.de verantwortet aber Dr. Stefan Link persönlich.",
 
     'footer.portal': "Gemeindeportal",
     'footer.links': 'Links',
@@ -161,8 +158,6 @@ export const ui = {
     'about.transparency.charityText': 'The association pursues exclusively and directly charitable purposes within the meaning of the German Fiscal Code (promotion of religion and church purposes) and is recognised as a charity. Donations and membership fees are tax-deductible; we issue donation receipts.',
     'about.transparency.board': 'Board',
     'about.transparency.boardText': 'Prof. Dr. Christoph Großmann, Gerolf Pabst and Volkert Tainz. The board works on a voluntary basis; any two board members represent the association jointly.',
-    'about.transparency.domains': 'Our web addresses',
-    'about.transparency.domainsText': 'verein.nak-alstertal.de is the only website of the association, and it is responsible for this website alone. The association does own the domain nak-alstertal.de, but the congregation portal nak-alstertal.de is the sole personal responsibility of Dr. Stefan Link.',
 
     'membership.title': 'Become a Member',
     'membership.subtitle': 'We invite everyone who shares our goals and values to become part of our support association.',
@@ -215,7 +210,6 @@ export const ui = {
 
     'footer.register': "Registered at Hamburg District Court (Amtsgericht Hamburg), register of associations VR 25331",
 
-    'footer.domain': "verein.nak-alstertal.de is the only website of the association. It owns the domain nak-alstertal.de, but the congregation portal nak-alstertal.de is the responsibility of Dr. Stefan Link personally.",
 
     'footer.portal': "Congregation portal",
     'footer.links': 'Links',
@@ -267,8 +261,6 @@ export const ui = {
     'about.transparency.charityText': "L'association poursuit exclusivement et directement des buts d'utilité publique au sens du code fiscal allemand (promotion de la religion et des objectifs ecclésiastiques) et est reconnue d'utilité publique. Les dons et cotisations sont déductibles des impôts ; nous délivrons des reçus fiscaux.",
     'about.transparency.board': 'Comité',
     'about.transparency.boardText': "Prof. Dr. Christoph Großmann, Gerolf Pabst et Volkert Tainz. Le comité travaille bénévolement ; deux membres du comité représentent ensemble l'association.",
-    'about.transparency.domains': 'Nos adresses Internet',
-    'about.transparency.domainsText': "verein.nak-alstertal.de est le seul site de l'association, et elle n'est responsable que de ce site. L'association est certes propriétaire du domaine nak-alstertal.de, mais le portail de la communauté nak-alstertal.de relève de la seule responsabilité personnelle du Dr Stefan Link.",
 
     'membership.title': 'Adhérer',
     'membership.subtitle': 'Nous invitons toute personne partageant nos valeurs à rejoindre notre association.',
@@ -321,7 +313,6 @@ export const ui = {
 
     'footer.register': "Inscrite au tribunal de Hambourg (Amtsgericht Hamburg), registre des associations VR 25331",
 
-    'footer.domain': "verein.nak-alstertal.de est le seul site de l'association. Le domaine nak-alstertal.de lui appartient, mais le portail nak-alstertal.de relève du Dr Stefan Link à titre personnel.",
 
     'footer.portal': "Portail de la congrégation",
     'footer.links': 'Liens',

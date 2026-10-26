@@ -9,11 +9,9 @@ const de = lang === 'de';
 
 const x = de
   ? { subtitle: 'Angaben gemäß § 5 DDG', address: 'Anschrift', court: 'Registergericht', regno: 'Vereinsregisternummer', board: 'Vorstand', contact: 'Kontakt', disclaimer: 'Haftungsausschluss',
-      charity: 'Gemeinnützigkeit', charityText: 'Der Verein ist als gemeinnützig anerkannt (Förderung der Religion und kirchlicher Zwecke im Sinne der Abgabenordnung).',
-      domains: 'Domains', domainsText: 'verein.nak-alstertal.de ist die einzige Website des Fördervereins, und nur für sie ist er verantwortlich. Der Verein ist zwar Inhaber der Domain nak-alstertal.de, für das Gemeindeportal nak-alstertal.de ist jedoch Dr. Stefan Link persönlich und allein verantwortlich, dort gilt dessen eigenes Impressum.' }
+      charity: 'Gemeinnützigkeit', charityText: 'Der Verein ist als gemeinnützig anerkannt (Förderung der Religion und kirchlicher Zwecke im Sinne der Abgabenordnung).' }
   : { subtitle: 'Information according to § 5 DDG', address: 'Address', court: 'Court of Registration', regno: 'Registration Number', board: 'Board', contact: 'Contact', disclaimer: 'Disclaimer',
-      charity: 'Charitable status', charityText: 'The association is recognised as a charity (promotion of religion and church purposes within the meaning of the German Fiscal Code).',
-      domains: 'Domains', domainsText: 'verein.nak-alstertal.de is the only website of the association, and it is responsible for this website alone. The association does own the domain nak-alstertal.de, but the congregation portal nak-alstertal.de is the sole personal responsibility of Dr. Stefan Link and has its own legal notice.' };
+      charity: 'Charitable status', charityText: 'The association is recognised as a charity (promotion of religion and church purposes within the meaning of the German Fiscal Code).' };
 
 const disclaimer = de
   ? [
@@ -45,10 +43,6 @@ const disclaimer = de
           <div class="mt-4">
             <h2 class="text-lg font-semibold text-foreground mb-2">{x.charity}</h2>
             <p class="text-muted-foreground">{x.charityText}</p>
-          </div>
-          <div class="mt-4">
-            <h2 class="text-lg font-semibold text-foreground mb-2">{x.domains}</h2>
-            <p class="text-muted-foreground">{x.domainsText} <a href="https://nak-alstertal.de" class="hover:text-primary transition-colors underline">nak-alstertal.de</a></p>
           </div>
         </div>
         <div class="space-y-6">
