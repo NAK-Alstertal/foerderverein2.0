@@ -56,7 +56,7 @@ export const ui = {
     'about.transparency.board': 'Vorstand',
     'about.transparency.boardText': 'Prof. Dr. Christoph Großmann, Gerolf Pabst und Volkert Tainz. Der Vorstand arbeitet ehrenamtlich, je zwei Vorstandsmitglieder vertreten den Verein gemeinsam.',
     'about.transparency.domains': 'Unsere Internetadressen',
-    'about.transparency.domainsText': 'Der Förderverein ist Inhaber und Betreiber der Domain nak-alstertal.de. Darunter betreibt er das Gemeindeportal für die Kirchengemeinde Hamburg-Alstertal (nak-alstertal.de) sowie diese Vereinswebsite (verein.nak-alstertal.de). Beide Angebote gehören zu derselben Organisation.',
+    'about.transparency.domainsText': 'Der Förderverein ist Inhaber der Domain nak-alstertal.de und betreibt unter verein.nak-alstertal.de diese Vereinswebsite, für die er auch verantwortlich ist. Das Gemeindeportal nak-alstertal.de wird von der Neuapostolischen Kirchengemeinde Hamburg-Alstertal betrieben und verantwortet.',
 
     'membership.title': 'Mitglied werden',
     'membership.subtitle': 'Wir laden alle ein, die unsere Ziele und Werte teilen, Teil unseres Fördervereins zu werden.',
@@ -109,7 +109,7 @@ export const ui = {
 
     'footer.register': "Eingetragen beim Amtsgericht Hamburg, Vereinsregister VR 25331",
 
-    'footer.domain': "nak-alstertal.de ist die Domain des Vereins. Dazu gehören diese Website (verein.nak-alstertal.de) und das Gemeindeportal nak-alstertal.de.",
+    'footer.domain': "nak-alstertal.de ist die Domain des Vereins. Diese Website (verein.nak-alstertal.de) verantwortet der Verein, das Gemeindeportal nak-alstertal.de die Kirchengemeinde.",
 
     'footer.portal': "Gemeindeportal",
     'footer.links': 'Links',
@@ -162,7 +162,7 @@ export const ui = {
     'about.transparency.board': 'Board',
     'about.transparency.boardText': 'Prof. Dr. Christoph Großmann, Gerolf Pabst and Volkert Tainz. The board works on a voluntary basis; any two board members represent the association jointly.',
     'about.transparency.domains': 'Our web addresses',
-    'about.transparency.domainsText': 'The association is the owner and operator of the domain nak-alstertal.de. Under it, it runs the congregation portal for the New Apostolic congregation Hamburg-Alstertal (nak-alstertal.de) and this association website (verein.nak-alstertal.de). Both belong to the same organisation.',
+    'about.transparency.domainsText': 'The association is the owner of the domain nak-alstertal.de and runs this association website at verein.nak-alstertal.de, for which it is also responsible. The congregation portal nak-alstertal.de is operated and run by the New Apostolic congregation Hamburg-Alstertal.',
 
     'membership.title': 'Become a Member',
     'membership.subtitle': 'We invite everyone who shares our goals and values to become part of our support association.',
@@ -215,7 +215,7 @@ export const ui = {
 
     'footer.register': "Registered at Hamburg District Court (Amtsgericht Hamburg), register of associations VR 25331",
 
-    'footer.domain': "nak-alstertal.de is the domain of the association. It covers this website (verein.nak-alstertal.de) and the congregation portal nak-alstertal.de.",
+    'footer.domain': "nak-alstertal.de is the domain of the association. This website (verein.nak-alstertal.de) is the responsibility of the association, the congregation portal nak-alstertal.de that of the congregation.",
 
     'footer.portal': "Congregation portal",
     'footer.links': 'Links',
@@ -268,7 +268,7 @@ export const ui = {
     'about.transparency.board': 'Comité',
     'about.transparency.boardText': "Prof. Dr. Christoph Großmann, Gerolf Pabst et Volkert Tainz. Le comité travaille bénévolement ; deux membres du comité représentent ensemble l'association.",
     'about.transparency.domains': 'Nos adresses Internet',
-    'about.transparency.domainsText': "L'association est propriétaire et exploitante du domaine nak-alstertal.de. Elle y exploite le portail de la communauté néo-apostolique de Hambourg-Alstertal (nak-alstertal.de) ainsi que ce site de l'association (verein.nak-alstertal.de). Les deux appartiennent à la même organisation.",
+    'about.transparency.domainsText': "L'association est propriétaire du domaine nak-alstertal.de et exploite ce site de l'association à l'adresse verein.nak-alstertal.de, dont elle est également responsable. Le portail de la communauté nak-alstertal.de est exploité par la communauté néo-apostolique de Hambourg-Alstertal, qui en est responsable.",
 
     'membership.title': 'Adhérer',
     'membership.subtitle': 'Nous invitons toute personne partageant nos valeurs à rejoindre notre association.',
@@ -321,7 +321,7 @@ export const ui = {
 
     'footer.register': "Inscrite au tribunal de Hambourg (Amtsgericht Hamburg), registre des associations VR 25331",
 
-    'footer.domain': "nak-alstertal.de est le domaine de l'association. Il comprend ce site (verein.nak-alstertal.de) et le portail de la congrégation nak-alstertal.de.",
+    'footer.domain': "nak-alstertal.de est le domaine de l'association. Ce site (verein.nak-alstertal.de) relève de l'association, le portail nak-alstertal.de de la communauté.",
 
     'footer.portal': "Portail de la congrégation",
     'footer.links': 'Liens',
