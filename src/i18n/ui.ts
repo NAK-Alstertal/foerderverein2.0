@@ -108,7 +108,6 @@ export const ui = {
     'footer.register': "Eingetragen beim Amtsgericht Hamburg, Vereinsregister VR 25331",
 
 
-    'footer.portal': "Gemeindeportal",
     'footer.links': 'Links',
     'footer.legal': 'Rechtliches',
 
@@ -211,7 +210,6 @@ export const ui = {
     'footer.register': "Registered at Hamburg District Court (Amtsgericht Hamburg), register of associations VR 25331",
 
 
-    'footer.portal': "Congregation portal",
     'footer.links': 'Links',
     'footer.legal': 'Legal',
 
@@ -314,7 +312,6 @@ export const ui = {
     'footer.register': "Inscrite au tribunal de Hambourg (Amtsgericht Hamburg), registre des associations VR 25331",
 
 
-    'footer.portal': "Portail de la congrégation",
     'footer.links': 'Liens',
     'footer.legal': 'Mentions légales',
 
