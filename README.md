@@ -22,7 +22,7 @@ npm run build    # Produktions-Build nach dist/
 Release und SSH-Deploy laufen über `@linkventures/release-tools`:
 
 ```sh
-npm run release -- production --patch
+npm run release:train -- production --push   # Release-Zug (release-tools ≥ 0.7.5): Commit pushen, warten bis live
 ```
 
 Deployt wird auf den Server alpha (Apache, `/var/www/NAKFoerdervereinAlstertal/production/dist`).

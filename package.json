@@ -9,11 +9,12 @@
     "preview": "astro preview",
     "astro": "astro",
     "deploy": "node node_modules/@linkventures/release-tools/src/cli/deploy.js",
-    "release": "node node_modules/@linkventures/release-tools/src/cli/release.js"
+    "release": "node node_modules/@linkventures/release-tools/src/cli/release.js",
+    "release:train": "node node_modules/@linkventures/release-tools/src/cli/train-release.js"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^5.1.4",
-    "@linkventures/release-tools": "github:Dr-Link-Ventures-GmbH/release-tools#v0.5.3",
+    "@linkventures/release-tools": "github:Dr-Link-Ventures-GmbH/release-tools#v0.7.6",
     "@types/node": "^22.16.5",
     "astro": "^4.16.18",
     "autoprefixer": "^10.4.21",
