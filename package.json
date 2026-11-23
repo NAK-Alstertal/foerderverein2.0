@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@astrojs/tailwind": "^5.1.4",
-    "@linkventures/release-tools": "github:Dr-Link-Ventures-GmbH/release-tools#v0.7.6",
+    "@linkventures/release-tools": "github:Dr-Link-Ventures-GmbH/release-tools#v0.8.0",
     "@types/node": "^22.16.5",
     "astro": "^4.16.18",
     "autoprefixer": "^10.4.21",
